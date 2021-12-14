@@ -401,11 +401,8 @@ export const products = [
         discountPercent: 40,
         images: [
         "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11271594/2021/1/28/5131ba41-11e2-4344-bc7b-31258f96af721611833535290PepeJeansGirlsBlueRegularFitSolidCasualDenimShirt1.jpg",
-
         "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11271594/2021/1/28/43134f0d-4b37-4208-8e0b-b56c08392ec31611833535334PepeJeansGirlsBlueRegularFitSolidCasualDenimShirt2.jpg",
-
         "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11271594/2021/1/28/d584e3ae-f16f-410a-8c61-9255a88bdf0a1611833535355PepeJeansGirlsBlueRegularFitSolidCasualDenimShirt3.jpg",
-
         "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11271594/2021/1/28/391ba51a-1d2f-4b2c-bb57-a8d68fe841641611833535377PepeJeansGirlsBlueRegularFitSolidCasualDenimShirt4.jpg",
         ],
         postedAt: 1179365841,

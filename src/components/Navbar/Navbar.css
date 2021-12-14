@@ -1,6 +1,66 @@
-Navbar{
+.navbar{
+    height : 80px;
+    width : 100%;
+    justify-content : space-between;
+    align-items : center;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding : 0 30px;
 }
 .logo{
-    height : 100px;
-    width : 100px;
+    height : 50px;
+    width : 50px;
+}
+
+/******************************
+        Nav Links
+*******************************/
+.nav-links-container{
+
+}
+.nav-link{
+    margin : 0 15px;
+    font-size : 14px;
+    font-weight: bold;
+}
+
+/******************************
+        Search Bar
+*******************************/
+.search-box{
+    border : none;
+    height : 50px;
+    width : 400px;
+    background-color: rgb(245,245,246);
+    padding-left: 60px;
+    font-size : 0.9rem;
+    border-radius: 5px;
+}
+.search-box:focus{
+    outline-color: #dbd6d6;
+    background-color: rgb(255, 255, 255);
+}
+.search-icon{
+    height : 20px;
+    width : 20px;
+    transform : translateX(200%);
+}
+
+
+/******************************
+            Actions
+*******************************/
+.action-item{
+    text-align: center;
+    margin : 0 10px;
+}
+.action-icon{
+    height : 20px;
+    width : 20px;
+}
+.action-text{
+    font-size: 12px;
+    font-weight:bold;
 }
