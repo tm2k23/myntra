@@ -1,0 +1,31 @@
+.item-card{
+    /* height : 500px; */
+    width : 210px;
+    margin : 20px;
+}
+.item-image{
+    height : 280px;
+    width : 100%;
+}
+.brand-name{
+    font-size : 1rem;
+    font-weight : bold;
+    color : var(--dark-color);
+}
+.product-name{
+    font-size : 0.85rem;
+    color : var(--light-color);
+}
+.price{
+    font-size : 1rem;
+    font-weight : bold;
+}
+.actual-price{
+    font-size : 0.75rem;
+    color : var(--lighter-color);
+    text-decoration: line-through;
+}
+.discount{
+    color : #ff905a;
+    font-size : 0.8rem;
+}

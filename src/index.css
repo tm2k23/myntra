@@ -1,0 +1,42 @@
+/***************************
+    CSS Color Variable
+****************************/
+:root{
+    --lightest-color:#94969f;
+    --lighter-color: #7e818c;
+    --light-color: #535766;
+    --dark-color: #282c3f;
+}
+
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+/***************************
+    Common flex Stylings
+****************************/
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap : wrap;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap : wrap;
+}

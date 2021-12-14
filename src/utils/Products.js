@@ -89,7 +89,7 @@ export const products = [
     {
         id: "723891",
         brandName: "ROADSTER",
-        productName: "CHECKED CASUAL SHIRT",
+        productName: "Checked Casual Shirt",
         price: 879,
         originalPrice: 1599,
         discountPercent: 45,
@@ -113,7 +113,7 @@ export const products = [
     {
         id: "412562",
         brandName: "ROADSTER",
-        productName: "CHECKED CASUAL SHIRT",
+        productName: "Checked Casual Shirt",
         price: 909,
         originalPrice: 1299,
         discountPercent: 30,
@@ -137,7 +137,7 @@ export const products = [
     {
         id: "156780",
         brandName: "JACK & JONES",
-        productName: "CHECKED CASUAL SHIRT",
+        productName: "Checked Casual Shirt",
         price: 1499,
         originalPrice: 2999,
         discountPercent: 50,
@@ -161,7 +161,7 @@ export const products = [
     {
         id: "121329",
         brandName: "MAST & HARBOUR",
-        productName: "CHECKED CASUAL SHIRT",
+        productName: "Checked Casual Shirt",
         price: 1099,
         originalPrice: 1999,
         discountPercent: 45,
@@ -185,7 +185,7 @@ export const products = [
     {
         id: "157167",
         brandName: "HERE & NOW",
-        productName: "REGULAR FIT SOLID CASUAL SHIRT",
+        productName: "Regular Fit Solid Casual Shirt",
         price: 599,
         originalPrice: 1499,
         discountPercent: 60,
@@ -209,7 +209,7 @@ export const products = [
     {
         id: "180820",
         brandName: "WROGN",
-        productName: "SLIM FIT SOLID CASUAL SHIRT",
+        productName: "Slim Fit Solid Casual Shirt",
         price: 1259,
         originalPrice: 2099,
         discountPercent: 40,
@@ -233,7 +233,7 @@ export const products = [
     {
         id: "108974",
         brandName: "HANCOCK",
-        productName: "REGULAR FIT FLORAL SHIRT",
+        productName: "Regular Fit Floral Shirt",
         price: 1379,
         originalPrice: 2299,
         discountPercent: 40,
@@ -257,7 +257,7 @@ export const products = [
     {
         id: "789042",
         brandName: "HIGHLANDER",
-        productName: "SLIM FIT PRINTED CASUAL SHIRT",
+        productName: "Slim Fit Printed Casual Shirt",
         price: 576,
         originalPrice: 1049,
         discountPercent: 45,
@@ -281,7 +281,7 @@ export const products = [
     {
         id: "510983",
         brandName: "MAST & HARBOUR",
-        productName: "SLIM FIT SOLID CASUAL SHIRT",
+        productName: "Slim Fit Solid Casual Shirt",
         price: 854,
         originalPrice: 1899,
         discountPercent: 55,
@@ -305,7 +305,7 @@ export const products = [
     {
         id: "567845",
         brandName: "GINI & JONY",
-        productName: "REGULAR FIT CHECKED SHIRT",
+        productName: "Regular Fir Checked Shirt",
         price: 1049,
         originalPrice: 1399,
         discountPercent: 25,
@@ -329,7 +329,7 @@ export const products = [
     {
         id: "667788",
         brandName: "PEPE JEANS",
-        productName: "REGULAR FIT PRINTED CASUAL SHIRT",
+        productName: "Regular Fit Printed Casual Shirt",
         price: 549,
         originalPrice: 999,
         discountPercent: 45,
@@ -353,7 +353,7 @@ export const products = [
     {
         id: "990077",
         brandName: "GAP",
-        productName: "FADED DENIM CASUAL SHIRT",
+        productName: "Faded Denim Casual Shirt",
         price: 1839,
         originalPrice: 2299,
         discountPercent: 20,
@@ -377,7 +377,7 @@ export const products = [
     {
         id: "445599",
         brandName: "H & M",
-        productName: "OVERSIZED COTTON SHIRT",
+        productName: "FaOversized Cotton Shirt",
         price: 1299,
         originalPrice: 1299,
         discountPercent: 0,
@@ -395,7 +395,7 @@ export const products = [
     {
         id: "301095",
         brandName: "PEPE JEANS",
-        productName: "REGULAR FIT SOLID DENIM SHIRT",
+        productName: "Regular Fir Solid Denim Shirt",
         price: 959,
         originalPrice: 1599,
         discountPercent: 40,
