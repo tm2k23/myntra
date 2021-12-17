@@ -1,6 +1,9 @@
 .filter-container{
     width : 250px;
-    border : 2px solid black;
-    height : 100vh;
+    /* border : 2px solid black; */
     display : inline-block;
+}
+
+.filter-container > div , .filter-container > h4{
+    padding-left:25px;
 }

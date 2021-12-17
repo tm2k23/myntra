@@ -4,7 +4,8 @@ import './Filters.css';
 export default function Discount() {
     const discounts = [ 10 , 20 , 30 , 40 , 50 , 60 , 70 , 80 ];
     return (
-        <div className="discount-filter" >
+        <div className=" specific-filter-container " >
+            <div className="filter-title" >DISCOUNT RANGE</div>
             {
                 discounts.map( discount => {
                     return (

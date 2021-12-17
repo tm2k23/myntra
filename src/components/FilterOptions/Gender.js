@@ -3,7 +3,8 @@ import React from 'react';
 import './Filters.css';
 export default function Gender() {
     return (
-        <div className="gender-filter" >
+        <div className="specific-filter-container" >
+            
             <label>
                 <input type="radio" name="gender" value="MENS"></input>
                 Men
