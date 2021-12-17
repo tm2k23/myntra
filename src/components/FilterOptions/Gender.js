@@ -1,5 +1,6 @@
 // this component is to display gender filter
 import React from 'react';
+import './Filters.css';
 export default function Gender() {
     return (
         <div className="gender-filter" >

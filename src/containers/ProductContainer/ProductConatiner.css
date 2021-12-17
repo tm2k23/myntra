@@ -1,0 +1,13 @@
+.product-container{
+    display: inline-flex;
+    flex-direction : row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items : center;
+    border: 2px solid black;
+
+    width : calc(100% - 250px); 
+    /* 100% for total width of the screen - size of filter container */
+    
+    vertical-align: top;
+}
