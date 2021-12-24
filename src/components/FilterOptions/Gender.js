@@ -2,25 +2,27 @@
 import React from 'react';
 import './Filters.css';
 export default function Gender() {
+    const Genders=[
+        "Men",
+        "Female",
+        "Boys",
+        "Girls",
+    ];
     return (
         <div className="specific-filter-container" >
+            {
+                Genders.map((gender,index) => {
+                    return(
+                        <label className="filter-label" key={index} >
+                            <input type="radio" name="gender" value={gender}></input>
+                            <span className="filter-name">
+                                {gender}
+                            </span>
+                        </label>
+                    )
+                })
+            }
             
-            <label>
-                <input type="radio" name="gender" value="MENS"></input>
-                Men
-            </label>
-            <label>
-                <input type="radio" name="gender" value="FEMALES"></input>
-                Women
-            </label>
-            <label>
-                <input type="radio" name="gender" value="BOYS"></input>
-                Boys
-            </label>
-            <label>
-                <input type="radio" name="gender" value="GIRLS"></input>
-                Girls
-            </label>
         </div>
     )
 }

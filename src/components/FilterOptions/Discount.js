@@ -9,9 +9,11 @@ export default function Discount() {
             {
                 discounts.map( discount => {
                     return (
-                        <label>
+                        <label className="filter-label" >
                             <input type="radio" name="discount" value={discount}></input>
-                            {discount}% and above
+                            <span className="filter-name">
+                                {discount}% and above
+                            </span>
                         </label>
                     )
                 })

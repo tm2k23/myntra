@@ -1,7 +1,7 @@
 .active-filters{
     margin-left:10px;
 }
-.filter-name{
+.active-filter-name{
     display: inline-block;
     border : 1px solid var(--lightest-color);;
     border-radius: 15px;

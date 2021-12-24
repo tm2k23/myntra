@@ -2,8 +2,8 @@ import React from 'react'
 import './ActiveFilters.css'
 export default function ActiveFilter() {
     const activeFilter=[
-        "white",
-        "male",
+        "White",
+        "Male",
         "10% and above"
     ]
     return (
@@ -12,7 +12,7 @@ export default function ActiveFilter() {
                 activeFilter.map( (filterName,key) =>{
                     return (
                         <div 
-                            className="filter-name flex-row" 
+                            className="active-filter-name flex-row" 
                         >
                             {filterName}
                             &nbsp; &nbsp;

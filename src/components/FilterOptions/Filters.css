@@ -1,6 +1,7 @@
 .specific-filter-container{
     border-top:  1px solid var(--light-border);
     border-right: 1px solid var(--light-border);
+    padding: 20px 0 20px 0;
 }
 
 .specific-filter-container:last-child{
@@ -16,4 +17,21 @@ label{
     width : 15px;
     display: inline-block;
     border-radius: 50%;
+    margin-right: 10px;
+}
+
+.filter-title{
+    font-size : 15px;
+    font-weight : bold;
+    color : var(--dark-color);
+    padding-bottom: 15px;
+}
+.filter-label{
+    cursor: pointer;
+    margin-bottom: 7px;
+    color : var(--light-color);
+    font-size : 15px;
+}
+.filter-name{
+    margin-left: 10px;
 }

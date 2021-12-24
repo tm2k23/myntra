@@ -8,6 +8,7 @@
     top: 0;
     background-color: #fff;
     padding : 0 30px;
+    z-index: 2;
 }
 .logo{
     height : 50px;

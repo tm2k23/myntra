@@ -9,9 +9,11 @@ export default function Price() {
             {
                 filterPrices.map( price => {
                     return (
-                        <label>
+                        <label className="filter-label" >
                             <input type="checkbox" name="price"></input>
-                            Rs. {price.start} to Rs. {price.end}
+                            <span className="filter-name">
+                                Rs. {price.start} to Rs. {price.end}
+                            </span>
                         </label>
                     )
                 })

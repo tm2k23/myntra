@@ -9,10 +9,12 @@ export default function Color() {
             {
                 filterColors.map( color => {
                     return (
-                        <label>
-                            <input type="checkbox" name="color"></input>
-                            <div className="filter-color-sample" style={{backgroundColor:color.hex }} ></div>
-                            {color.name}
+                        <label className="filter-label" >
+                            <input type="checkbox" name="color" ></input>
+                            <span className="filter-name">
+                                <div className="filter-color-sample" style={{backgroundColor:color.hex }} ></div>
+                                {color.name}
+                            </span>
                         </label>
                     )
                 })

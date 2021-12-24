@@ -3,7 +3,24 @@
     /* border : 2px solid black; */
     display : inline-block;
 }
-
 .filter-container > div , .filter-container > h4{
     padding-left:25px;
+}
+.filter-container-header{
+    align-items : center;
+    justify-content : space-between;
+    padding-right: 10px;
+    height :49.5px;
+    font-weight: bold;
+}
+.filter-container-title{
+    font-size : 17px;
+    font-weight : bold;
+}
+.clear-all-filters{
+    font-size : 14px;
+    color:#FF3F6C;
+}
+.clear-all-filters:hover{
+    cursor: pointer;
 }
