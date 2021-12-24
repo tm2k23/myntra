@@ -11,8 +11,12 @@ export default function ActiveFilter() {
             {
                 activeFilter.map( (filterName,key) =>{
                     return (
-                        <div className="filter-name" >
+                        <div 
+                            className="filter-name flex-row" 
+                        >
                             {filterName}
+                            &nbsp; &nbsp;
+                            <i class="fas fa-times remove-filter"></i>
                         </div>
                     )
                 } )
