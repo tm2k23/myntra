@@ -10,3 +10,10 @@
 label{
     display: block;
 }
+
+.filter-color-sample{
+    height : 15px;
+    width : 15px;
+    display: inline-block;
+    border-radius: 50%;
+}
