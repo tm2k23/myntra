@@ -1,0 +1,10 @@
+.active-filters{
+    margin-left:10px;
+}
+.filter-name{
+    display: inline-block;
+    border : 2px solid black;
+    border-radius: 15px;
+    padding : 2px 5px;
+    margin: 0 10px;
+}

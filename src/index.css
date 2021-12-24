@@ -2,11 +2,12 @@
     CSS Color Variable
 ****************************/
 :root{
-    --lightest-color:#94969f;
+    --lightest-color: #D4D5D9;
     --lighter-color: #7e818c;
     --light-color: #535766;
     --dark-color: #282c3f;
     --light-border:#E9E9ED;
+
 }
 
 
@@ -20,7 +21,8 @@
 }
 
 body{
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; 
     font-size: 16px;
 }
 
