@@ -1,10 +1,10 @@
 import React from 'react'
-import {ProductContainer,FilterContainer} from '../containers/index.js';
+import {ProductListContainer,FilterContainer} from '../containers/index.js';
 export default function Home() {
     return (
         <div>
             <FilterContainer/>
-            <ProductContainer/>
+            <ProductListContainer/>
         </div>
     )
 }

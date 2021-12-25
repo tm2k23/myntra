@@ -1,9 +1,10 @@
 import React from 'react'
-
+import {ProductDetailsContainer, ProductSamplesContainer} from '../containers/index';
 export default function Product() {
     return (
         <div>
-            HI
+            <ProductSamplesContainer />
+            {/* <ProductDetailsContainer /> */}
         </div>
     )
 }
