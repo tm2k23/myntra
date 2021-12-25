@@ -1,0 +1,133 @@
+.product-details-container{
+    display: inline-block;
+    vertical-align: top;
+    padding-left : 30px;
+    width : 40%;
+    padding-right : 30px;
+}
+
+/*********** BRAND NAME AND PRODUCT NAME ************/
+
+.product-details-container .product-brandname{
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.product-details-container .product-name{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--lighter-color);
+}
+
+/*************** PRODUCT RATINGS *****************/
+
+.product-rating-count{
+    padding-bottom : 15px;
+    border-bottom: 1px solid var(--lightest-color);
+    margin-bottom: 10px;
+}
+.product-rating-count .rating{
+    font-weight : bold;
+}
+.product-rating-count .star-icon{
+    font-size: 0.9rem;
+    color: var(--lighter-color);
+}
+.product-rating-count .no-of-reviews{
+    font-size: 0.9rem;
+    color: var(--light-color);
+    font-weight:300;
+}
+
+/**************  PRODUCT PRICE  ****************/
+
+.product-price-details .final-price{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.product-price-details .original-price{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--light-color);
+    text-decoration: line-through;
+}
+.product-price-details .discount-percentage{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color : #FF905A;
+}
+.product-price-details .tax-detail{
+    color : var(--lighter-color);
+}
+
+/*********************  PRODUCT SIZE  ******************/
+
+.product-size-details{
+    margin-top : 30px;
+    margin-bottom: 40px;
+}
+.select-size-title{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.detail-size-label{
+    /* display : inline-block; */
+    display : inline-flex;
+    flex-wrap: wrap;
+    align-items : center;
+    justify-content : center;
+    height : 3rem;
+    width : 3rem;
+    border-radius : 50%;
+    border : 0.8px solid var(--lightest-color);
+    margin : 5px;
+    font-size: 1rem;
+    margin-top :10px;
+}
+.detail-size-label:hover {
+    border : 1px solid black;
+    cursor: pointer;
+}   
+.size-radio-input{
+    display : none;
+}
+.product-size-details input[type="radio"]:checked + label {
+    border : 1px solid black;
+    background-color:rgb(250, 227, 227);
+}
+
+/**************  PRODUCT ACTIONS  ***************/
+
+.product-actions{
+    margin-top: 30px;
+}
+.product-actions button{
+    border-radius : 5px;
+}
+.product-actions button:hover{
+    cursor: pointer;
+}
+.product-actions .bag-handler-button{
+    height : 50px;
+    width : 50%;
+    background-color:#FF3E6C;
+    border : none;
+    font-size: 1rem;
+    font-weight : bold;
+    color : white;
+}
+.product-actions .wishlist-handler-button{
+    height : 50px;
+    width : 40%;
+    border : none;
+    background-color:transparent;
+    border : 1px solid var(--lightest-color) ;
+    margin-left:20px;
+    font-size: 1rem;
+    font-weight: 550;
+}
+.product-actions .remove-from-wishlist-button{
+    background-color:#586080;
+    color : white;
+}

@@ -2,8 +2,8 @@
     width : 60%;
     /* border : 1px solid black; */
     padding: 0 5px 0 25px;
+    display : inline-flex;
     justify-content : space-between;
-
 }
 .sample-image-container{
     width : 48%;
