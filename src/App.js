@@ -1,14 +1,13 @@
 import {Navbar , Breadcrumb} from './components/index.js';
-import {ProductContainer,FilterContainer} from './containers/index.js';
+import {HomePage , ProductPage} from './pages/index.js';
 function App() {
   return (
     <div>
       <Navbar/>
       <Breadcrumb/>
-      <FilterContainer/>
-      <ProductContainer/>
+      {/* <HomePage/> */}
+      <ProductPage/>
     </div>
   );
 }
-
 export default App;
