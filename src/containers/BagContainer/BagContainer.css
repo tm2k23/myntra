@@ -45,3 +45,11 @@
     color:white;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 900px) {
+    .bag-action{
+        position : fixed;
+        bottom : 0px;
+    }    
+}
