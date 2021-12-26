@@ -6,7 +6,7 @@
     border-radius : 0 0 0px 0px;
     overflow: scroll;
     justify-content : space-evenly;
-    padding-bottom:60px;
+    padding-bottom:120px;
 }
 .bag-container::-webkit-scrollbar{
     display: none;
