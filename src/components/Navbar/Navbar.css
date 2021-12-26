@@ -18,11 +18,8 @@
 /******************************
         Nav Links
 *******************************/
-.nav-links-container{
-
-}
 .nav-link{
-    margin : 0 15px;
+    margin : 0 10px;
     font-size : 14px;
     font-weight: bold;
 }
@@ -57,6 +54,9 @@
     text-align: center;
     margin : 0 10px;
 }
+.action-item:hover{
+    cursor: pointer;
+}
 .action-icon{
     height : 20px;
     width : 20px;
@@ -64,4 +64,63 @@
 .action-text{
     font-size: 12px;
     font-weight:bold;
+}
+.mobile-search-button{
+    display: none;
+}
+.mobile-hide{
+    display: flex;
+}
+
+
+
+
+
+
+/*****************************   RESPONSIVENESS   ********************************/
+@media screen and (max-width: 1150px){
+    .nav-links-container{
+        display: none;
+    }
+    .search-box{
+        width : 500px;
+        height : 40px;
+    }
+}
+@media screen and (max-width: 850px){
+    .search-box{
+        width : 300px;
+        height : 40px;
+        padding-left: 50px;
+    }
+}
+@media screen and (max-width: 650px){
+    .navbar{
+        height : 60px;
+        padding : 0 10px;
+    }
+    .logo{
+        height : 40px;
+        width : 40px;
+    }
+    .mobile-search-button{
+        display: inline-block;
+    }
+    .action-text{
+        display:none;
+    }
+    .action-item{
+        margin : 0px;
+    }
+    .action-container{
+        width : 70%;
+        justify-content: space-between;
+    }
+    .mobile-hide{
+        display:none;
+    }
+    .search-box{
+        width : 70vw;
+        height : 35px;
+    }
 }
