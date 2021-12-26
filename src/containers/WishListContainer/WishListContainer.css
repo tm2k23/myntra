@@ -2,6 +2,12 @@
     height : 100%;
     width : 100%;
     position : relative;
-    background-color : #cbcdd3;
+    background-color :white;
     border-radius : 0 0 5px 5px;
+    overflow: scroll;
+    padding : 10px 10px 10px 10px;
+    justify-content : space-evenly;
+}
+.wishlist-container::-webkit-scrollbar{
+    display: none;
 }

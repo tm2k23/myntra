@@ -7,3 +7,5 @@ export {default as DiscountFilter} from './FilterOptions/Discount';
 export {default as Breadcrumb} from './Breadcrumb/Breadcrumb';
 export {default as Sort} from './Sort/Sort';
 export {default as ActiveFilters} from './ActiveFilters/ActiveFilters';
+export {default as BagItemCard} from './BagItemCard/BagItemCard';
+export {default as WishListItemCard} from './WishListItemCard/WishListItemCard';
