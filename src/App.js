@@ -5,10 +5,10 @@ function App() {
   return (
     <div className="App" >
       <Modal/>
-      <Navbar/>
-      <Breadcrumb/>
-      <HomePage/>
-      <ProductPage/>
+      {/* <Navbar/> */}
+      {/* <Breadcrumb/> */}
+      {/* <HomePage/> */}
+      {/* <ProductPage/> */}
     </div>
   );
 }
