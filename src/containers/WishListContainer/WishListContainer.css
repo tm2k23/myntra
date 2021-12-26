@@ -11,3 +11,14 @@
 .wishlist-container::-webkit-scrollbar{
     display: none;
 }
+@media screen and (max-width: 900px){
+    .wishlist-container{
+        padding-bottom : 50px;
+    }
+}
+@media screen and (max-width: 480px){
+    .wishlist-container{
+        padding : 0px;
+        padding-bottom : 50px;
+    }
+}

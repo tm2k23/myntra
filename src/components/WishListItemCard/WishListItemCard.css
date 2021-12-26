@@ -59,3 +59,16 @@
     border : none;
     background-color:transparent
 }
+
+@media screen and (max-width: 480px) {
+    .wishlist-item-card{
+        width : 160px;
+        margin : 8px 3px;
+    }
+    .wishlist-item-image-container{
+        height : 213px;
+    }
+    .wishlist-item-percent-off{
+        display : none;
+    }
+}

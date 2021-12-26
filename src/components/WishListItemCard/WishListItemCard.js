@@ -19,7 +19,7 @@ export default function WishListItemCard({ item }) {
                 <div className="wishlist-item-price">
                     <span className="wishlist-item-price" > Rs.{item.price} </span>
                     <span className="wishlist-item-original-price" > Rs.{item.originalPrice} </span> 
-                    <span className="wishlist-item discount" > ({item.discountPercent}% OFF) </span> 
+                    <span className="wishlist-item discount" > ({item.discountPercent} %) <span className="wishlist-item-percent-off" >OFF</span></span> 
                 </div>
             </div>
             <div className="wishlist-item-action center" >
