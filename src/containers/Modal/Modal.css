@@ -22,3 +22,19 @@
     background-color: transparent;
     color: rgb(221, 9, 9);
 }
+
+@media screen and (max-width: 1150px) {
+    .modal{
+        width : 80vw;
+        left: 10vw;
+    }
+}
+@media screen and (max-width: 900px) {
+    .modal{
+        width : 100vw;
+        height : 100vh;
+        top: 0px;
+        left: 0px;
+        border-radius:0px;
+    }
+}

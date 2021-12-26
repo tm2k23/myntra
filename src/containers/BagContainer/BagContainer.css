@@ -1,11 +1,12 @@
 .bag-container{
     height : 100%;
     width : 100%;
-    position : relative;
+    /* position : relative; */
     background-color :white;
-    border-radius : 0 0 5px 5px;
+    border-radius : 0 0 0px 0px;
     overflow: scroll;
     justify-content : space-evenly;
+    padding-bottom:60px;
 }
 .bag-container::-webkit-scrollbar{
     display: none;
@@ -14,7 +15,7 @@
 
 /***************   BAG ACTION   ******************/
 .bag-action{
-    position : sticky;
+    position : absolute;
     bottom : 0px;
     left : 0px;
     width : 100%;
