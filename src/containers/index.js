@@ -2,3 +2,4 @@ export {default as ProductListContainer} from './ProductListContainer/ProductLis
 export {default as FilterContainer} from './FilterContainer/FilterContainer';
 export {default as ProductDetailsContainer} from './ProductDetailsContainer/ProductDetailsContainer';
 export {default as ProductSamplesContainer} from './ProductSamplesContainer/ProductSamplesContainer';
+export {default as Modal} from './Modal/Modal';

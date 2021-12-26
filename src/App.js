@@ -1,11 +1,13 @@
 import {Navbar , Breadcrumb} from './components/index.js';
+import {Modal} from './containers/index.js';
 import {HomePage , ProductPage} from './pages/index.js';
 function App() {
   return (
-    <div>
+    <div className="App" >
+      <Modal/>
       <Navbar/>
       <Breadcrumb/>
-      {/* <HomePage/> */}
+      <HomePage/>
       <ProductPage/>
     </div>
   );
