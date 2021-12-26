@@ -1,0 +1,7 @@
+.wishlist-container{
+    height : 100%;
+    width : 100%;
+    position : relative;
+    background-color : #cbcdd3;
+    border-radius : 0 0 5px 5px;
+}
