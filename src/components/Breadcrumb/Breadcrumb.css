@@ -27,15 +27,6 @@
 }
 @media screen and (max-width: 650px){
     .breadcrumb-container{
-        padding-left: 10px;
-        font-size: 0.9rem;
-        position:sticky;
-        top:60px;
-        height : 40px;
-        z-index: 5;
-    }
-    .breadcrumb-item:not(:last-child):after  {
-        margin: 0px 2px;
-        content: "/";
+        display : none ;
     }
 }

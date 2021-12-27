@@ -28,7 +28,7 @@
     .product-container-header{
         position:sticky;
         background-color:white;
-        top:100px;
+        top:60px;
         z-index: 5;
     }
 }
