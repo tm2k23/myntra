@@ -8,7 +8,7 @@ import {
 } from '../../components/index';
 export default function FilterContainer() {
     let isFilterApplied = true;
-    const [isFilterContainerActive , setFilterContainerActive] = React.useState(!!!false);
+    const [isFilterContainerActive , setFilterContainerActive] = React.useState(false);
     return (
         <>
         <div 
