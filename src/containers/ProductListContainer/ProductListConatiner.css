@@ -9,15 +9,15 @@
     width : calc(100% - 250px); 
     /* 100% for total width of the screen - size of filter container */
     vertical-align: top;
-    padding-top: 50px;
 }
 .product-container-header{
     width : 100%;
-    position : absolute;
-    top: 0;
-    left: 0;
-    align-items: center;
-    justify-content: space-between;
-    height : 50px;
     border-bottom: 1px solid var(--light-border);
+}
+
+
+@media screen and (max-width: 1150px) {
+    .product-container{
+        width : calc(100% - 200px); 
+    }
 }

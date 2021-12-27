@@ -4,10 +4,10 @@ export default function ActiveFilter() {
     const activeFilter=[
         "White",
         "Male",
-        "10% and above"
+        "10% and above",
     ]
     return (
-        <div className="active-filters" >
+        <div className="active-filters flex-row" >
             {
                 activeFilter.map( (filterName,key) =>{
                     return (

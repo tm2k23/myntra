@@ -5,9 +5,9 @@ import './ProductListConatiner.css'
 export default function ProductListContainer() {
     return (
         <div className="product-container" >  
-            <div className="product-container-header flex-row " >
-                <ActiveFilters/>
+            <div className="product-container-header flex-column " >
                 <Sort/>
+                <ActiveFilters/>
             </div>
             {
                 products.map((item, index) => {

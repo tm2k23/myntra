@@ -1,11 +1,12 @@
 .sort-by{
-    margin-right: 20px;
+    margin : 0 20px 14px 0px;
     position:relative;
     border:1px solid var(--lightest-color) ;
-    height : 40px;
+    height : 35px;
     width: 270px;
     align-items: center;
     border-radius:5px;
+    align-self: flex-end;
 }
 .sort-by:hover .sort-list{
     display:block;

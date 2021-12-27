@@ -24,3 +24,11 @@
 .clear-all-filters:hover{
     cursor: pointer;
 }
+
+/**********************************   RESPONSIVE   ********************************/
+
+@media screen and (max-width: 1150px) {
+    .filter-container{
+        width : 200px;
+    }
+}
