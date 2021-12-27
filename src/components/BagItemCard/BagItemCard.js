@@ -1,5 +1,6 @@
 import React from 'react'
 import './BagItemCard.css'
+import {Link} from 'react-router-dom';
 export default function BagItemCard({ item }) {
     function removeItemFromBagHandler(event){
         console.log(item);
@@ -22,16 +23,20 @@ export default function BagItemCard({ item }) {
     const selectedSize=44;
     return (
         <div className="bag-item-card">
-            <div className="bag-item-image-container">
-                <img src={item.images[0]} alt="product" className="bag-item-image"/>
-            </div>
-            <div className="bag-item-details">
-                <div className="bag-item-name">{item.productName}</div>
-                <div className="bag-item-price">
-                    <span className="bag-item-price" > Rs.{item.price} </span>
-                    <span className="bag-item-original-price" > Rs.{item.originalPrice} </span> 
-                    <span className="bag-item discount" > ({item.discountPercent}% OFF) </span> 
+            <Link to={`/${item.id}`}>
+                <div className="bag-item-image-container">
+                    <img src={item.images[0]} alt="product" className="bag-item-image"/>
                 </div>
+            </Link>
+            <div className="bag-item-details">
+                <Link to={`/${item.id}`}>
+                    <div className="bag-item-name">{item.productName}</div>
+                    <div className="bag-item-price">
+                        <span className="bag-item-price" > Rs.{item.price} </span>
+                        <span className="bag-item-original-price" > Rs.{item.originalPrice} </span> 
+                        <span className="bag-item discount" > ({item.discountPercent}% OFF) </span> 
+                    </div>
+                </Link>
                 <div className="bag-item-action" >
                     <>
                         <button 

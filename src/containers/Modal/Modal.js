@@ -2,7 +2,7 @@ import React from 'react'
 import './Modal.css';
 import {BagContainer , WishListContainer,SimilarProductsContainer} from '../index';
 export default function Modal() {
-    let modalContent="similar";
+    let modalContent="bag";
     function renderSwitch( container ){
         switch(container){
             case "bag":
