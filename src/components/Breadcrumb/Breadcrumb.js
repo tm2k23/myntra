@@ -4,7 +4,7 @@ export default function Breadcrumb() {
     const breadCrumb=[
         "Home",
         "Clothing",
-        "T-Shirts",
+        "T-Shirts"
     ]
     return (
         <div className="breadcrumb-container flex-row" >
