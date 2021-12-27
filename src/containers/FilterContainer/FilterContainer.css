@@ -27,6 +27,9 @@
 .mobile-filter-icon{
     display : none;
 }
+.mobile-hide-filter-container{
+    display : block;
+}
 
 /**********************************   RESPONSIVE   ********************************/
 
@@ -37,8 +40,23 @@
 }
 
 @media screen and (max-width: 650px) {
+    .mobile-hide-filter{
+        display : none !important;
+    }
     .filter-container{
-        display : none;
+        background-color :white;
+        z-index:1;
+        width : 100%;
+        position : fixed;
+        top : 60px;
+        height : calc(100vh - 60px)!important;
+        overflow :scroll;
+        padding-top : 50px;
+        padding-bottom : 50px;
+        /* display : none; */
+    }
+    .filter-container::-webkit-scrollbar {
+        display: none;
     }
     .mobile-filter-icon{
         display : block;
@@ -47,5 +65,14 @@
         font-size:1.5rem;
         z-index: 6;
         margin-top:2px;
+        color:var(--lighter-color);
+    }
+    .close-filter-container{
+        font-size: 1.8rem;
+        margin-top:-2px!important;
+        margin-left: 5px!important;
+    }
+    .mobile-filter-icon:hover{
+        cursor: pointer;
     }
 }
