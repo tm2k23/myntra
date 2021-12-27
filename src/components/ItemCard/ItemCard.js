@@ -60,7 +60,10 @@ export default function ItemCard( {item , index} ) {
                     onClick={ removeFromWishListHandler }
                     style={{display: !isWishlisted ? 'none' : 'block'}}
                 >
-                    <i class="far fa-heart heart-remove"></i>
+                    <i 
+                        class="fas fa-heart heart-remove"
+                        style={{color: 'red'}}
+                    ></i>
                     &nbsp;
                     WISHLISTED
                 </button>
@@ -72,6 +75,20 @@ export default function ItemCard( {item , index} ) {
                     </span>
                     : 38, 40, 42, 44, 46
                 </p>
+            </div>
+            <div className="item-list-mobile-action" >
+                <button 
+                    onClick={ addToWishListHandler }
+                    style={{display: isWishlisted ? 'none' : 'block'}}
+                >
+                    <i class="far fa-heart heart-add"></i>
+                </button>
+                <button 
+                    onClick={ removeFromWishListHandler }
+                    style={{display: !isWishlisted ? 'none' : 'block'}}
+                >
+                    <i class="fas fa-heart heart-remove"></i>
+                </button>
             </div>
         </div>
     )

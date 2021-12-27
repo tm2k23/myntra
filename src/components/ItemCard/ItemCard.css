@@ -94,7 +94,41 @@
     color : var(--lighter-color);
     padding:5px 0px 5px 10px;
 }
+.item-list-mobile-action{
+    display : none;
+}
+.item-action .wishlist-button{
+    background-color: white;
+    border : 1px solid var(--lighter-color); 
+} 
+.item-action .remove-from-wishlist{
+    background-color:#586080 !important ;
+    color : white;
+}
 
+@media screen and (max-width: 1000px){
+    .item-card:hover .item-action{
+        display : none;
+    }
+    .item-list-mobile-action{
+        display : block;
+        position : absolute;
+        top : 5px;
+        right : 5px;
+    }
+    .item-list-mobile-action button{
+        height : 30px;
+        width : 30px;
+        border : none;
+        color : rgb(109, 8, 8);
+        font-size : 1.5rem;
+        cursor : pointer;
+        background-color :transparent;
+    }
+    .heart-remove{
+        color : red;
+    }
+}
 @media screen and (max-width: 480px){
     .item-card{
         width : 48%;
