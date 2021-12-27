@@ -7,6 +7,7 @@
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
+    background-color:white;
 }
 .breadcrumb-item{
     margin: 0px 0px;
@@ -28,6 +29,10 @@
     .breadcrumb-container{
         padding-left: 10px;
         font-size: 0.9rem;
+        position:sticky;
+        top:60px;
+        height : 40px;
+        z-index: 5;
     }
     .breadcrumb-item:not(:last-child):after  {
         margin: 0px 2px;

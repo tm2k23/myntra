@@ -16,3 +16,9 @@
 .remove-filter:hover{
     cursor: pointer;
 }
+
+@media screen and (max-width: 650px) {
+    .active-filters{
+        display : none ;
+    }
+}

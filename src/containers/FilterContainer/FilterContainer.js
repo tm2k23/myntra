@@ -9,6 +9,8 @@ import {
 export default function FilterContainer() {
     let isFilterApplied = true;
     return (
+        <>
+        <div className="mobile-filter-icon" ><i class="fas fa-sliders-h"></i></div>
         <div className="filter-container" >
             <div className="filter-container-header flex-row " >
                 <span className="filter-container-title" >FILTERS</span>
@@ -24,5 +26,6 @@ export default function FilterContainer() {
             <ColorFilter/>
             <PriceFilter/>
         </div>
+        </>
     )
 }

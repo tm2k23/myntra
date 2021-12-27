@@ -21,3 +21,14 @@
         width : calc(100% - 200px); 
     }
 }
+@media screen and (max-width: 650px) {
+    .product-container{
+        width : 100%;
+    }    
+    .product-container-header{
+        position:sticky;
+        background-color:white;
+        top:100px;
+        z-index: 5;
+    }
+}

@@ -24,11 +24,27 @@
 .clear-all-filters:hover{
     cursor: pointer;
 }
+.mobile-filter-icon{
+    display : none;
+}
 
 /**********************************   RESPONSIVE   ********************************/
 
 @media screen and (max-width: 1150px) {
     .filter-container{
         width : 200px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .filter-container{
+        display : none;
+    }
+    .mobile-filter-icon{
+        display : block;
+        position : fixed;
+        left : 10px;
+        font-size:1.4rem;
+        z-index: 6;
     }
 }

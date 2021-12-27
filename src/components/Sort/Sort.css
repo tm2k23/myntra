@@ -56,3 +56,10 @@
     z-index:1;
     background-color: #eceef3 !important ;
 }
+
+
+@media screen and (max-width: 650px) {
+    .sort-by{
+        margin : 0 10px 10px 0px;
+    }
+}
