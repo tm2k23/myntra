@@ -1,6 +1,6 @@
 .product-sample-carousel{
     display: none ;
-    margin : 0px 0px;
+    margin-bottom : 20px;
 }
 @media screen and (max-width: 650px) {
     .product-sample-carousel{
