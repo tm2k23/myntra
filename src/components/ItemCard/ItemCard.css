@@ -48,6 +48,9 @@
 .product-name{
     font-size : 0.85rem;
     color : var(--light-color);
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .price-details{
     margin-top: 5px;
@@ -90,4 +93,18 @@
     font-size : 0.8rem;
     color : var(--lighter-color);
     padding:5px 0px 5px 10px;
+}
+
+@media screen and (max-width: 480px){
+    .item-card{
+        width : 48%;
+        margin : 2px;
+    }
+    .item-image{
+        height : auto !important;
+        min-height : 150px;
+    }
+    .off{
+        display: none;
+    }
 }

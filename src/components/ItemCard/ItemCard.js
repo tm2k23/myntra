@@ -42,7 +42,7 @@ export default function ItemCard( {item , index} ) {
                     &nbsp;
                     <span className="actual-price" >Rs. {item.originalPrice}</span> 
                     &nbsp;
-                    <span className="discount" >({item.discountPercent}% OFF)</span> 
+                    <span className="discount" >({item.discountPercent}% <span className="off" >OFF</span>)</span> 
                 </p>
             </div>
             <div className="item-action">
