@@ -129,19 +129,19 @@
         width : 25px;
         border : none;
         border-radius: 50%;
-        color : rgb(109, 8, 8);
+        color : rgb(126, 121, 121);
         font-size : 1.2rem;
         cursor : pointer;
-        background-color : var(--lightest-color);
+        background-color : rgba(221, 199, 199, 0.8);
         padding-top : 3px;
     }
     .heart-remove{
-        color : red;
+        color : rgb(238, 42, 42);
     }
     .view-similar-mobile-button{
         display : block;
         position : absolute;
-        bottom : 8px;
+        bottom : 9px;
         right : 5px;
     }
     .rating-detail{
