@@ -1,14 +1,16 @@
 import React from 'react'
 import './Modal.css';
-import {BagContainer , WishListContainer} from '../index';
+import {BagContainer , WishListContainer,SimilarProductsContainer} from '../index';
 export default function Modal() {
-    let modalContent="wishlist";
+    let modalContent="similar";
     function renderSwitch( container ){
         switch(container){
             case "bag":
                 return <BagContainer/>;
             case "wishlist":
                 return <WishListContainer/>;
+            case "similar":
+                return <SimilarProductsContainer/>;
             default:
                 return <BagContainer/>;
         }

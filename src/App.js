@@ -4,7 +4,7 @@ import {HomePage , ProductPage} from './pages/index.js';
 function App() {
   return (
     <div className="App" >
-      {/* <Modal/> */}
+      <Modal/>
       <Navbar/>
       <Breadcrumb/>
       <HomePage/>

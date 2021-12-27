@@ -1,0 +1,13 @@
+.similar-products-container{
+    height : 100%;
+    width : 100%;
+    justify-content:space-evenly;
+    align-items:center;
+    overflow:scroll;
+}
+.similar-products-container::-webkit-scrollbar {
+    display: none;
+}
+.similar-products-container .view-similar-button{
+    display: none !important ;
+}
