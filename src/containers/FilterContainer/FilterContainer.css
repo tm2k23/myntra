@@ -43,8 +43,9 @@
     .mobile-filter-icon{
         display : block;
         position : fixed;
-        left : 10px;
-        font-size:1.4rem;
+        left : 12px;
+        font-size:1.5rem;
         z-index: 6;
+        margin-top:2px;
     }
 }
