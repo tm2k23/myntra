@@ -1,5 +1,6 @@
 import React from 'react'
 import {ProductDetailsContainer, ProductSamplesContainer} from '../containers/index';
+import {ProductSampleCarousel} from '../components/index';
 export default function Product() {
     const product = {
         id: "828019",
@@ -27,6 +28,7 @@ export default function Product() {
     }
     return (
         <div>
+            <ProductSampleCarousel product={product}/>
             <ProductSamplesContainer product={product} />
             <ProductDetailsContainer product={product} />
         </div>

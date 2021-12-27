@@ -149,3 +149,10 @@
         padding-right : 20px;
     }
 }
+@media screen and (max-width: 650px) {
+    .product-details-container{
+        padding-left : 20px;
+        width : 100%;
+        padding-right : 20px;
+    }
+}
