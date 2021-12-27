@@ -2,8 +2,8 @@ import React from 'react'
 import './ProductDetailsContainer.css'
 export default function ProductDetailsContainer({product}) {
     const sizes=[38,40,42,44,46];
-    let isAddedToBag=false;
-    let isAddedToWishlist=!!!!!!!!!!!!false;
+    let isAddedToBag=!!!!false;
+    let isAddedToWishlist=!!!!!false;
     function addItemToWishListHandler(event) {
         console.log(product);
         console.log("add item to wishlist");
@@ -58,12 +58,12 @@ export default function ProductDetailsContainer({product}) {
                             <>
                                 <input 
                                     type="radio" 
-                                    name="size" 
+                                    name= {`size-${product.id}`}
                                     value={size} 
                                     className="size-radio-input"
-                                    id={index}
+                                    id={ product.id + index}
                                 />
-                                <label className="detail-size-label" for={index} >
+                                <label className="detail-size-label" for={product.id + index} >
                                     <span className="detail-size-number" > {size} </span>
                                 </label>
                             </>

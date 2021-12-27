@@ -22,3 +22,17 @@
 .sample-image-container:hover .sample-image {
     transform: scale(1.1);
 }
+
+
+
+
+
+/*********************  RESPONSIVENESS  ******************/
+@media screen and (max-width: 800px) {
+    .product-samples-container{
+        width : 50%;
+        padding: 0 5px 0 15px;
+        display : inline-flex;
+        justify-content : space-between;
+    }
+}

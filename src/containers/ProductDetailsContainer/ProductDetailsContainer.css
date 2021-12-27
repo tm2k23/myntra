@@ -1,21 +1,23 @@
 .product-details-container{
     display: inline-block;
     vertical-align: top;
-    padding-left : 30px;
+    padding-left : 20px;
     width : 40%;
-    padding-right : 30px;
+    padding-right : 20px;
+    position : sticky;
+    top : 90px;
 }
 
 /*********** BRAND NAME AND PRODUCT NAME ************/
 
 .product-details-container .product-brandname{
-    font-size: 1.7rem;
+    font-size: 1.7em;
     font-weight: 700;
 }
 .product-details-container .product-name{
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 400;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
     color: var(--lighter-color);
 }
 
@@ -30,11 +32,11 @@
     font-weight : bold;
 }
 .product-rating-count .star-icon{
-    font-size: 0.9rem;
+    font-size: 0.9em;
     color: var(--lighter-color);
 }
 .product-rating-count .no-of-reviews{
-    font-size: 0.9rem;
+    font-size: 0.9em;
     color: var(--light-color);
     font-weight:300;
 }
@@ -42,17 +44,17 @@
 /**************  PRODUCT PRICE  ****************/
 
 .product-price-details .final-price{
-    font-size: 1.7rem;
+    font-size: 1.7em;
     font-weight: 600;
 }
 .product-price-details .original-price{
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 300;
     color: var(--light-color);
     text-decoration: line-through;
 }
 .product-price-details .discount-percentage{
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 500;
     color : #FF905A;
 }
@@ -64,12 +66,12 @@
 
 .product-size-details{
     margin-top : 30px;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
 }
 .select-size-title{
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
 }
 .detail-size-label{
     /* display : inline-block; */
@@ -77,12 +79,12 @@
     flex-wrap: wrap;
     align-items : center;
     justify-content : center;
-    height : 3rem;
-    width : 3rem;
+    height : 2.5em;
+    width : 2.5em;
     border-radius : 50%;
     border : 0.8px solid var(--lightest-color);
     margin : 5px;
-    font-size: 1rem;
+    font-size: 1em;
     margin-top :10px;
 }
 .detail-size-label:hover {
@@ -109,25 +111,41 @@
     cursor: pointer;
 }
 .product-actions .bag-handler-button{
-    height : 50px;
-    width : 50%;
+    height : 3em;
+    width : 45%;
     background-color:#FF3E6C;
     border : none;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight : bold;
     color : white;
 }
 .product-actions .wishlist-handler-button{
-    height : 50px;
-    width : 40%;
+    height : 3em;
+    width : 45%;
     border : none;
     background-color:transparent;
     border : 1px solid var(--lightest-color) ;
     margin-left:20px;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 550;
 }
 .product-actions .remove-from-wishlist-button{
     background-color:#586080;
     color : white;
+}
+
+
+
+/*********************  RESPOSIVE  ******************/
+@media screen and (max-width: 1000px) {
+    .product-details-container{
+        font-size: 13px !important;
+    }
+}
+@media screen and (max-width: 800px) {
+    .product-details-container{
+        padding-left : 20px;
+        width : 50%;
+        padding-right : 20px;
+    }
 }

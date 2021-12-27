@@ -7,8 +7,8 @@ function App() {
       {/* <Modal/> */}
       <Navbar/>
       <Breadcrumb/>
-      <HomePage/>
-      {/* <ProductPage/> */}
+      {/* <HomePage/> */}
+      <ProductPage/>
     </div>
   );
 }
