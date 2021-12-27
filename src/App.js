@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App" >
       <BrowserRouter>
-        <Modal/>
+        {/* <Modal/> */}
         <Navbar/>
         <Breadcrumb/>
         <Routes>
