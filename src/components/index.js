@@ -10,3 +10,4 @@ export {default as ActiveFilters} from './ActiveFilters/ActiveFilters';
 export {default as BagItemCard} from './BagItemCard/BagItemCard';
 export {default as WishListItemCard} from './WishListItemCard/WishListItemCard';
 export {default as ProductSampleCarousel} from './ProductSampleCarousel/ProductSampleCarousel';
+export {default as ViewSimilarButton} from './ViewSimilarButton/ViewSimilarButton';

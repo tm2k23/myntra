@@ -105,6 +105,14 @@
     background-color:#586080 !important ;
     color : white;
 }
+.item-card-similar-button{
+    position : absolute;
+    top : -25px;
+    right : 5px;
+}
+.view-similar-mobile-button{
+    display : none;
+}
 
 @media screen and (max-width: 1000px){
     .item-card:hover .item-action{
@@ -129,6 +137,18 @@
     }
     .heart-remove{
         color : red;
+    }
+    .view-similar-mobile-button{
+        display : block;
+        position : absolute;
+        bottom : 8px;
+        right : 5px;
+    }
+    .rating-detail{
+        background-color: rgba(255, 255, 255, 0.85);
+        padding : 2px 3px;
+        font-size: 0.7rem;
+        border-radius :10px;
     }
 }
 @media screen and (max-width: 480px){

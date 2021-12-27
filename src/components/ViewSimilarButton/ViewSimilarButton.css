@@ -1,0 +1,8 @@
+.view-similar-button{
+    height : 20px;
+    padding :0px 6px 0px 6px;
+    font-size :0.8rem;
+    background-color :rgba(255, 255, 255, 0.85);
+    color  : var(--light-color);
+    border-radius : 10px;
+}

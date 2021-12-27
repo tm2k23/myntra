@@ -1,5 +1,6 @@
 import React from 'react'
 import './ItemCard.css'
+import {ViewSimilarButton} from '../index';
 export default function ItemCard( {item , index} ) {
     function nFormatter(num, digits=1) {
         const lookup = [
@@ -33,6 +34,9 @@ export default function ItemCard( {item , index} ) {
                 <div className="rating-detail" > 
                     {item.rating} <i class="fas fa-star star"></i> | {nFormatter(item.numberOfReviews)}
                 </div>
+                <div>
+                    <ViewSimilarButton item={item} externalClassName="view-similar-mobile-button" />
+                </div>
             </div>
             <div className="item-info">
                 <p className="brand-name" >{item.brandName}</p>
@@ -46,6 +50,7 @@ export default function ItemCard( {item , index} ) {
                 </p>
             </div>
             <div className="item-action">
+                <ViewSimilarButton item={item} externalClassName="item-card-similar-button"/>
                 <button 
                     className="wishlist-button add-to-wishlist center" 
                     onClick={ addToWishListHandler }
