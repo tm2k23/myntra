@@ -6,17 +6,31 @@ import { ReactComponent as Profile } from "../../assets/images/profile.svg";
 import { ReactComponent as Wishlist } from "../../assets/images/heart.svg";
 import { ReactComponent as Bag } from "../../assets/images/bag.svg";
 import { useState } from 'react';
+import {Link } from "react-router-dom";
 export default function Navbar() {
     const [isSearchActive , setIsSearchActive] = useState(!!!!false);
+    const navLinks = [
+        "MEN",
+        "WOMEN",
+        "KIDS",
+        "HOME & LIVING",
+        "OFFERS"
+    ];
     return (
         <div className=" navbar flex-row" >
-            <img src={logo} alt="logo" className="logo" />
+            <Link to="/">
+                <img src={logo} alt="logo" className="logo" />
+            </Link>
             <div className="nav-links-container flex-row ">
-                <div className="nav-link"> MEN </div>
-                <div className="nav-link"> WOMEN </div>
-                <div className="nav-link"> KIDS </div>
-                <div className="nav-link"> HOME & LIVING </div>
-                <div className="nav-link"> OFFERS </div>
+                {
+                    navLinks.map((navLink, index) => {   
+                        return (
+                            <Link to="/" key={index}>
+                                <div className="nav-link"> {navLink} </div>
+                            </Link>
+                        )
+                    })
+                }
             </div>
             <div className={isSearchActive ? "search-container flex-row center " : "mobile-hide search-container flex-row center "}>
                 <Search className="search-icon" />

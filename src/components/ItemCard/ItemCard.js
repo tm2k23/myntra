@@ -1,6 +1,7 @@
 import React from 'react'
 import './ItemCard.css'
 import {ViewSimilarButton} from '../index';
+import {Link } from "react-router-dom";
 export default function ItemCard( {item , index} ) {
     function nFormatter(num, digits=1) {
         const lookup = [
@@ -30,7 +31,9 @@ export default function ItemCard( {item , index} ) {
     return (
         <div className="item-card" key={index}>
             <div className="item-image">
-                <img src={(item.images)} alt={item.name}/>
+                <Link to={`/${item.id}`}>
+                    <img src={(item.images)} alt={item.name}/>
+                </Link>
                 <div className="rating-detail" > 
                     {item.rating} <i class="fas fa-star star"></i> | {nFormatter(item.numberOfReviews)}
                 </div>
@@ -38,17 +41,19 @@ export default function ItemCard( {item , index} ) {
                     <ViewSimilarButton item={item} externalClassName="view-similar-mobile-button" />
                 </div>
             </div>
-            <div className="item-info">
-                <p className="brand-name" >{item.brandName}</p>
-                <p className="product-name" >{item.productName}</p>
-                <p className="price-details" >
-                    <span className="price" >Rs. {item.price}</span> 
-                    &nbsp;
-                    <span className="actual-price" >Rs. {item.originalPrice}</span> 
-                    &nbsp;
-                    <span className="discount" >({item.discountPercent}% <span className="off" >OFF</span>)</span> 
-                </p>
-            </div>
+            <Link to={`/${item.id}`}>
+                <div className="item-info">
+                    <p className="brand-name" >{item.brandName}</p>
+                    <p className="product-name" >{item.productName}</p>
+                    <p className="price-details" >
+                        <span className="price" >Rs. {item.price}</span> 
+                        &nbsp;
+                        <span className="actual-price" >Rs. {item.originalPrice}</span> 
+                        &nbsp;
+                        <span className="discount" >({item.discountPercent}% <span className="off" >OFF</span>)</span> 
+                    </p>
+                </div>
+            </Link>
             <div className="item-action">
                 <ViewSimilarButton item={item} externalClassName="item-card-similar-button"/>
                 <button 
