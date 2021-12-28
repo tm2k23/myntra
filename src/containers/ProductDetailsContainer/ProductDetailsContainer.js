@@ -1,10 +1,10 @@
-import React from 'react';
+import {React,useState} from 'react';
 import './ProductDetailsContainer.css';
 import { useSelector , useDispatch } from 'react-redux';
 import { addItemToWishlist , removeItemFromWishlist } from '../../actions/wishlist';
 import { Link } from "react-router-dom";
 import { nFormatter , isInWishList , isInBag } from '../../helpers/general';
-import { addItemToBag} from '../../actions/bag';
+import { addItemToBag , setSize} from '../../actions/bag';
 import { openModal } from '../../actions/modals';
 export default function ProductDetailsContainer({product}) {
     const sizes=[38,40,42,44,46];
@@ -17,6 +17,16 @@ export default function ProductDetailsContainer({product}) {
     });
     let isAddedToWishlist = isInWishList( wishlist , product );
     let isAddedToBag = isInBag( bag , product );
+    const [selectedSize,setSelectedSize] = useState(null);
+    if( isAddedToBag ){
+        bag.map(item => {
+            if( item.id === product.id ){
+                if( selectedSize != item.size ){
+                    setSelectedSize(item.size);
+                }
+            }
+        })
+    }
     return (
         <div className="product-details-container" >
             <h2 className="product-brandname" >{product.brandName}</h2>
@@ -44,6 +54,8 @@ export default function ProductDetailsContainer({product}) {
                                     value={size} 
                                     className="size-radio-input"
                                     id={ product.id + index}
+                                    onClick = {() => setSelectedSize(size) }
+                                    checked={selectedSize === size}
                                 />
                                 <label className="detail-size-label" for={product.id + index} >
                                     <span className="detail-size-number" > {size} </span>
@@ -58,7 +70,13 @@ export default function ProductDetailsContainer({product}) {
                     <button
                         style={isAddedToBag ? {display:'none'} : {display:'inline'} }
                         className="bag-handler-button"
-                        onClick={()=>{ dispatch(addItemToBag(product));}}
+                        onClick={()=>{ 
+                            if( selectedSize === null ){
+                                window.alert("Please select a size");
+                            }
+                            else
+                                dispatch(addItemToBag(product , selectedSize));
+                        }}
                     >
                         <i class="fas fa-shopping-bag"></i>
                         &nbsp;
@@ -67,7 +85,9 @@ export default function ProductDetailsContainer({product}) {
                     <button
                         style={isAddedToBag ? {display:'inline'} : {display:'none'} }
                         className="bag-handler-button"
-                        onClick={()=>{dispatch(openModal('bag'))}}
+                        onClick={()=>{
+                            dispatch(openModal('bag'))
+                        }}
                     >
                         GO TO BAG
                         &nbsp;
