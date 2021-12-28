@@ -11,3 +11,4 @@ export {default as BagItemCard} from './BagItemCard/BagItemCard';
 export {default as WishListItemCard} from './WishListItemCard/WishListItemCard';
 export {default as ProductSampleCarousel} from './ProductSampleCarousel/ProductSampleCarousel';
 export {default as ViewSimilarButton} from './ViewSimilarButton/ViewSimilarButton';
+export {default as Page404} from './404/404';

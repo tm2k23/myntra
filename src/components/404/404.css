@@ -1,0 +1,13 @@
+.emptypage{
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+.emptypage-insider{
+    height : 100%;
+    width: 100%;
+}
