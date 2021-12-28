@@ -11,13 +11,20 @@ const defaultBagState = [];
 export default function bag(state = defaultBagState, action) {
     switch (action.type) {
         case ADD_TO_BAG:
-            return [
-                ...state,
-                action.item
-            ];
+            let alreadyPresent=false;
+            state.map(item => {
+                if(item.productId === action.item.productId){
+                    alreadyPresent=true;
+                }
+            })
+            if(!alreadyPresent){
+                state.push(action.item);
+            }
+            return [...state];
         case REMOVE_FROM_BAG:
             return state.filter(item => item.id !== action.item.id);
         case EMPTY_BAG:
+            window.alert('Checkout Successful');
             return [];
         case SET_QUANTITY:
             return state.map(item => {

@@ -1,20 +1,31 @@
 import React from 'react';
 import './BagContainer.css';
-import {BagItemCard} from '../../components/index'
+import {BagItemCard} from '../../components/index';
+import {emptyBag} from '../../actions/bag';
 import {useDispatch, useSelector} from 'react-redux';
 import { findTotal } from '../../helpers/general';
 export default function BagContainer() {
-    const products = useSelector(state => state.bagStore);
-    console.log(products);
+    const bag = useSelector(state => state.bagStore);
+    const dispatch = useDispatch();
+    // console.log(products);
     function checkOutHandler(event){
-        console.log("Proceed to checkout, here is what will happen");
-        console.log("1. We need to close the modal as well");
-        console.log("2. We need to make the bag empty");
+        console.log("check out");
+        let checkoutCheck = true;
+        bag.map(product => {
+            if( product.size === undefined ){
+                window.alert('Please select size for ' + product.productName);
+                checkoutCheck = false;
+                return ;
+            }
+        })
+        if( checkoutCheck ){
+            dispatch(emptyBag());
+        }
     }
     return (
         <div className="bag-container flex-row " >
             {
-                products.map((product,index) =>{
+                bag.map((product,index) =>{
                     return (
                         <BagItemCard item={product} />
                     )
@@ -22,14 +33,13 @@ export default function BagContainer() {
             }
             <div className="bag-action" >
                 <div className="total-amount center" >
-                    <p>₹ { findTotal(products) }</p>
+                    <p>₹ { findTotal(bag) }</p>
                 </div>
                 <div 
-                    className={`checkout center ${ products.length > 0 ? "" : "inactive"} `} 
+                    className={`checkout center ${ bag.length > 0 ? "" : "inactive"} `} 
+                    onClick={ checkOutHandler }
                 >
-                    <p
-                        onClick={ checkOutHandler }
-                    >
+                    <p>
                         Checkout <i class="fas fa-arrow-circle-right"></i>
                     </p>
                 </div>
