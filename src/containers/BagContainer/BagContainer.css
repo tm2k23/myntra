@@ -32,7 +32,7 @@
     height : 100%;
 }
 .total-amount{
-    background-color : rgb(98, 72, 190);
+    background-color : rgb(125, 100, 218);
     color : white;
 }
 .checkout{
@@ -44,6 +44,10 @@
     background-color:rgb(221, 96, 96);
     color:white;
     cursor: pointer;
+}
+.bag-action .inactive{
+    pointer-events: none;
+    opacity: 0.3;
 }
 
 

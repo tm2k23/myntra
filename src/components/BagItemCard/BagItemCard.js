@@ -2,19 +2,14 @@ import React from 'react'
 import './BagItemCard.css'
 import {Link} from 'react-router-dom';
 import { setQuantity , setSize , removeItemFromBag } from '../../actions/bag';
-import {useDispatch} from 'react-redux';
+import { addItemToWishlist , removeItemFromWishlist} from '../../actions/wishlist';
+import { isInWishList} from '../../helpers/general';
+import {useDispatch , useSelector} from 'react-redux';
 export default function BagItemCard({ item }) {
     const dispatch = useDispatch();
-    function wishlistItemFromBagHandler(event){
-        console.log(item);
-        console.log(" wishlist item from bag")
-    }
-    function unwishlistItemFromBagHandler(event){
-        console.log(item);
-        console.log(" unwish list item from bag");
-    }
+    const wishlist = useSelector(state => state.wishlistStore);
     console.log(item);
-    let isWishListed =true;
+    let isWishListed = isInWishList( wishlist,item )
     const sizes=[38,40,42,44,46];
     return (
         <div className="bag-item-card"  >
@@ -42,14 +37,14 @@ export default function BagItemCard({ item }) {
                         </button>
                         <button 
                             className="wishlist-item-from-bag wishlist-bag-button " 
-                            onClick={wishlistItemFromBagHandler}
+                            onClick={()=>dispatch(addItemToWishlist(item))}
                             style={{display: isWishListed ? "none" : "block"}}
                         >
                             <i class="far fa-heart"></i>
                         </button>
                         <button 
                             className="unwishlist-item-from-bag wishlist-bag-button" 
-                            onClick={unwishlistItemFromBagHandler}
+                            onClick={()=>dispatch(removeItemFromWishlist(item))}
                             style={{display: !isWishListed ? "none" : "block"}}
                         >
                             <i class="fas fa-heart"></i>

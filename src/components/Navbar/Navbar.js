@@ -12,7 +12,6 @@ import {openModal} from '../../actions/modals';
 export default function Navbar() {
     const [isSearchActive , setIsSearchActive] = useState(!!!!false);
     const dispatch = useDispatch();
-    
     const navLinks = [
         "MEN",
         "WOMEN",
@@ -20,7 +19,7 @@ export default function Navbar() {
         "HOME & LIVING",
         "OFFERS"
     ];
-    const bagItemCount = 5;
+    const bagItemCount = useSelector(state => state.bagStore.length);
     return (
         <div className=" navbar flex-row" >
             <Link to="/">

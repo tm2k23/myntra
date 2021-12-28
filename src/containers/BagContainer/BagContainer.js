@@ -2,6 +2,7 @@ import React from 'react';
 import './BagContainer.css';
 import {BagItemCard} from '../../components/index'
 import {useDispatch, useSelector} from 'react-redux';
+import { findTotal } from '../../helpers/general';
 export default function BagContainer() {
     const products = useSelector(state => state.bagStore);
     console.log(products);
@@ -21,12 +22,16 @@ export default function BagContainer() {
             }
             <div className="bag-action" >
                 <div className="total-amount center" >
-                    <p>₹ 56009</p>
+                    <p>₹ { findTotal(products) }</p>
                 </div>
-                <div className="checkout center" >
+                <div 
+                    className={`checkout center ${ products.length > 0 ? "" : "inactive"} `} 
+                >
                     <p
                         onClick={ checkOutHandler }
-                    >Checkout <i class="fas fa-arrow-circle-right"></i></p>
+                    >
+                        Checkout <i class="fas fa-arrow-circle-right"></i>
+                    </p>
                 </div>
             </div>
         </div>

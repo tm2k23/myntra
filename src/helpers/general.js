@@ -34,3 +34,11 @@ export const isInBag = ( bag , item )  =>{
     });
     return isPresent;
 }
+
+export const findTotal = ( bag ) => {
+    let total = 0;
+    bag.forEach( item => {
+        total += item.quantity * item.price;
+    });
+    return total;
+}
