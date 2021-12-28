@@ -1,7 +1,7 @@
 // this component is to display discount filter
 import React from 'react';
 import './Filters.css';
-export default function Discount() {
+export default function Discount({activeFilter}) {
     const discounts = [ 10 , 20 , 30 , 40 , 50 , 60 , 70 , 80 ];
     return (
         <div className=" specific-filter-container " >
@@ -10,7 +10,12 @@ export default function Discount() {
                 discounts.map( discount => {
                     return (
                         <label className="filter-label" >
-                            <input type="radio" name="discount" value={discount}></input>
+                            <input 
+                                type="radio" 
+                                name="discount" 
+                                value={discount}
+                                checked={activeFilter === discount}
+                            ></input>
                             <span className="filter-name">
                                 {discount}% and above
                             </span>

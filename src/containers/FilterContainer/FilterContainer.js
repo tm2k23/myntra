@@ -36,10 +36,10 @@ export default function FilterContainer() {
                     CLEAR ALL
                 </span>
             </div>
-            <GenderFilter/>
-            <DiscountFilter/>
-            <ColorFilter/>
-            <PriceFilter/>
+            <GenderFilter activeFilter={filters.gender} />
+            <DiscountFilter activeFilter={filters.discount} />
+            <ColorFilter activeFilter={filters.color} />
+            <PriceFilter activeFilter={filters.price} />
         </div>
         </>
     )

@@ -3,7 +3,15 @@ export const checkIfNoFilter = ( filters ) => {
     noFilter = noFilter && filters.color.length===0 && filters.price.length===0;
     return noFilter;
 };
-
+export const checkPriceInFilter = ( price , filters ) => {
+    let isFound=false;
+    filters?.map( (range) => {
+        if(JSON.stringify(range) === JSON.stringify(price)){
+            isFound=true;
+        }
+    })
+    return isFound;
+}
 let genderFilter = ( products , genderFilter ) => {
     if(genderFilter === null) return products;
     return products.filter(product => {
