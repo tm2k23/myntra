@@ -20,6 +20,7 @@ export default function Navbar() {
         "HOME & LIVING",
         "OFFERS"
     ];
+    const bagItemCount = 5;
     return (
         <div className=" navbar flex-row" >
             <Link to="/">
@@ -66,6 +67,7 @@ export default function Navbar() {
                     onClick={() => dispatch(openModal('bag'))}
                 >
                     <Bag className="action-icon" />
+                    {bagItemCount!==0 && <p className="bag-item-count">{bagItemCount} </p>}
                     <p className="action-text">Bag</p>
                 </div>
             </div>

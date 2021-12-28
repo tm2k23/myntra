@@ -1,8 +1,7 @@
 import React from 'react'
-import {products} from '../../utils/Products';
 import { ItemCard , Sort , ActiveFilters } from '../../components/index';
 import './ProductListConatiner.css'
-export default function ProductListContainer() {
+export default function ProductListContainer( {products} ) {
     return (
         <div className="product-container" >  
             <div className="product-container-header flex-column " >
