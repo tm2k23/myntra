@@ -1,6 +1,8 @@
 import {
     ADD_GENDER_FILTER,
+    REMOVE_GENDER_FILTER,
     ADD_DISCOUNT_FILTER,
+    REMOVE_DISCOUNT_FILTER,
     ADD_COLOR_FILTER,
     REMOVE_COLOR_FILTER,
     ADD_PRICE_FILTER,
@@ -9,10 +11,23 @@ import {
 } from '../actions/filters';
 import {checkPriceInFilter} from '../helpers/selectors';
 const defaultFilterState = {
-    gender : null,
-    discount : null,
-    color : [],
-    price : [],
+    gender : "Male",
+    discount : 50,
+    color : ["White","Blue"],
+    price : [
+        {
+            start : 2000,
+            end : 3000
+        },
+        {
+            start : 3000,
+            end : 4000
+        },
+        {
+            start : 4000,
+            end : 5000
+        }
+    ],
 }
 
 export default function filters( state = defaultFilterState , action){
@@ -22,10 +37,20 @@ export default function filters( state = defaultFilterState , action){
                 ...state, 
                 gender : action.gender
             }
+        case REMOVE_GENDER_FILTER : 
+            return {
+                ...state, 
+                gender : null
+            }
         case ADD_DISCOUNT_FILTER :
             return {
                 ...state, 
                 discount : action.discount
+            }
+        case REMOVE_DISCOUNT_FILTER :
+            return {
+                ...state,
+                discount : null
             }
         case ADD_COLOR_FILTER :
             return {
@@ -48,7 +73,7 @@ export default function filters( state = defaultFilterState , action){
                 price : state.price.filter(price => checkPriceInFilter(price , action.price)===false)
             }
         case CLEAR_ALL_FILTERS :
-            return { } 
+            return defaultFilterState
         default :
             return state;
     }
