@@ -5,10 +5,14 @@ import { ReactComponent as Search } from "../../assets/images/search.svg";
 import { ReactComponent as Profile } from "../../assets/images/profile.svg";
 import { ReactComponent as Wishlist } from "../../assets/images/heart.svg";
 import { ReactComponent as Bag } from "../../assets/images/bag.svg";
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import {Link } from "react-router-dom";
+import {openModal} from '../../actions/modals';
 export default function Navbar() {
     const [isSearchActive , setIsSearchActive] = useState(!!!!false);
+    const dispatch = useDispatch();
+    
     const navLinks = [
         "MEN",
         "WOMEN",
@@ -52,11 +56,15 @@ export default function Navbar() {
                     <Profile className="action-icon" />
                     <p className="action-text">Profile</p>
                 </div>
-                <div className="action-item" >
+                <div className="action-item" 
+                    onClick={() => dispatch(openModal('wishlist'))}
+                >
                     <Wishlist className="action-icon" />
                     <p className="action-text">Wishlist</p>
                 </div>
-                <div className="action-item" >
+                <div className="action-item" 
+                    onClick={() => dispatch(openModal('bag'))}
+                >
                     <Bag className="action-icon" />
                     <p className="action-text">Bag</p>
                 </div>

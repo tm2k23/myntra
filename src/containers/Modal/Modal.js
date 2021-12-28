@@ -1,8 +1,16 @@
 import React from 'react'
 import './Modal.css';
 import {BagContainer , WishListContainer,SimilarProductsContainer} from '../index';
+import { useDispatch, useSelector } from 'react-redux';
+import {closeModal} from '../../actions/modals';
 export default function Modal() {
-    let modalContent="bag";
+    const dispatch = useDispatch();
+    const {
+        modals
+    } = useSelector(state => ({
+        modals : state.modalsStore,
+    }));
+    let modalContent=modals.container;
     function renderSwitch( container ){
         switch(container){
             case "bag":
@@ -17,7 +25,12 @@ export default function Modal() {
     }
     return (
         <div className="modal" >
-            <button className="modal-close-button" > <i class="fas fa-times"></i> </button>
+            <button 
+                className="modal-close-button" 
+                onClick={() => dispatch(closeModal())}
+            > 
+                <i class="fas fa-times"></i> 
+            </button>
             {
                 renderSwitch(modalContent)
             }
