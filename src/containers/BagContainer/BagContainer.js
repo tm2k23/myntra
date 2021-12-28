@@ -1,6 +1,6 @@
 import React from 'react';
 import './BagContainer.css';
-import {BagItemCard} from '../../components/index';
+import {BagItemCard , Empty} from '../../components/index';
 import {emptyBag} from '../../actions/bag';
 import {useDispatch, useSelector} from 'react-redux';
 import { findTotal } from '../../helpers/general';
@@ -25,6 +25,9 @@ export default function BagContainer() {
     return (
         <div className="bag-container flex-row " >
             {
+                bag.length === 0 ? 
+                <Empty />
+                :
                 bag.map((product,index) =>{
                     return (
                         <BagItemCard item={product} />
