@@ -2,32 +2,19 @@ import React from 'react'
 import './ItemCard.css'
 import {ViewSimilarButton} from '../index';
 import {Link } from "react-router-dom";
+import { addItemToWishlist , removeItemFromWishlist } from '../../actions/wishlist';
+import { useDispatch , useSelector } from 'react-redux'; 
+import { nFormatter } from '../../helpers/formatters';
 export default function ItemCard( {item , index} ) {
-    function nFormatter(num, digits=1) {
-        const lookup = [
-            { value: 1, symbol: "" },
-            { value: 1e3, symbol: "k" },
-            { value: 1e6, symbol: "M" },
-            { value: 1e9, symbol: "G" },
-            { value: 1e12, symbol: "T" },
-            { value: 1e15, symbol: "P" },
-            { value: 1e18, symbol: "E" }
-        ];
-        const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
-        var item = lookup.slice().reverse().find(function(item) {
-            return num >= item.value;
-        });
-        return item ? (num / item.value).toFixed(digits).replace(rx, "$1") + item.symbol : "0";
-    }
-    function addToWishListHandler( event ){
-        console.log(item);
-        console.log( " Added to wishlist");
-    }
-    function removeFromWishListHandler( event ){
-        console.log(item);
-        console.log( " removed from wishlist");
-    }
-    var isWishlisted = false;
+    
+    const dispatch = useDispatch();
+    const wishlist = useSelector(state => state.wishlistStore);
+    let isWishlisted = false;
+    wishlist.forEach(wishlistItem => {
+        if(wishlistItem.id === item.id){
+            isWishlisted = true;
+        }
+    });
     return (
         <div className="item-card" key={index}>
             <div className="item-image">
@@ -58,7 +45,7 @@ export default function ItemCard( {item , index} ) {
                 <ViewSimilarButton item={item} externalClassName="item-card-similar-button"/>
                 <button 
                     className="wishlist-button add-to-wishlist center" 
-                    onClick={ addToWishListHandler }
+                    onClick={()=> dispatch(addItemToWishlist(item))}
                     style={{display: isWishlisted ? 'none' : 'block'}}
                 >
                     <i class="far fa-heart heart-add"></i>
@@ -67,7 +54,7 @@ export default function ItemCard( {item , index} ) {
                 </button>
                 <button 
                     className="wishlist-button remove-from-wishlist center" 
-                    onClick={ removeFromWishListHandler }
+                    onClick={()=> dispatch(removeItemFromWishlist(item))}
                     style={{display: !isWishlisted ? 'none' : 'block'}}
                 >
                     <i 
@@ -88,13 +75,13 @@ export default function ItemCard( {item , index} ) {
             </div>
             <div className="item-list-mobile-action" >
                 <button 
-                    onClick={ addToWishListHandler }
+                    onClick={()=> dispatch(addItemToWishlist(item))}
                     style={{display: isWishlisted ? 'none' : 'block'}}
                 >
                     <i class="far fa-heart heart-add"></i>
                 </button>
                 <button 
-                    onClick={ removeFromWishListHandler }
+                    onClick={()=> dispatch(removeItemFromWishlist(item))}
                     style={{display: !isWishlisted ? 'none' : 'block'}}
                 >
                     <i class="fas fa-heart heart-remove"></i>

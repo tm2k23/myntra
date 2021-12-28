@@ -1,14 +1,14 @@
 import React from 'react'
 import './WishListItemCard.css'
 import {Link} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
+import {addItemToWishlist,removeItemFromWishlist} from '../../actions/wishlist';
+import {addItemToBag} from '../../actions/bag';
 export default function WishListItemCard({ item }) {
+    const dispatch = useDispatch();
     function moveItemToBagHandler(event){
         console.log(item);
         console.log("move it to bag");
-    }
-    function removeItemFromWishListHandler(event){
-        console.log(item);
-        console.log("remove it from wishlist");
     }
     return (
         <div className="wishlist-item-card">
@@ -28,13 +28,13 @@ export default function WishListItemCard({ item }) {
             <div className="wishlist-item-action center" >
                 <button 
                     className="remove-item-button" 
-                    onClick={removeItemFromWishListHandler}
+                    onClick={()=> dispatch(removeItemFromWishlist(item))} 
                 >
                     <i class="fas fa-times-circle"></i>
                 </button>
                 <button 
                     className="move-to-bag-button" 
-                    onClick={moveItemToBagHandler}
+                    onClick={()=> { dispatch(addItemToBag(item)); }}
                 >
                     MOVE TO BAG
                 </button>

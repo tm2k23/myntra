@@ -2,7 +2,7 @@ import React from 'react';
 import './BagContainer.css';
 import {BagItemCard} from '../../components/index'
 import {useDispatch, useSelector} from 'react-redux';
-export default function BagContainer({item}) {
+export default function BagContainer() {
     const products = useSelector(state => state.bagStore);
     console.log(products);
     function checkOutHandler(event){
