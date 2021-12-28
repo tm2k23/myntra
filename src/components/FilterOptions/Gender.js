@@ -3,7 +3,7 @@ import React from 'react';
 import './Filters.css';
 export default function Gender() {
     const Genders=[
-        "Men",
+        "Male",
         "Female",
         "Boys",
         "Girls",

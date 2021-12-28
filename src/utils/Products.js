@@ -131,7 +131,7 @@ export const products = [
         postedAt: 1479014104,
         numberOfReviews: 30,
         rating: 3.9,
-        color: ["MUSTARD YELLOW", "BROWN"],
+        color: ["YELLOW", "BROWN"],
         gender: "MALE",
     },
     {
@@ -155,7 +155,7 @@ export const products = [
         postedAt: 1513631715,
         numberOfReviews: 1200,
         rating: 4.4,
-        color: ["GREEN", "OFF-WHITE"],
+        color: ["GREEN", "WHITE"],
         gender: "MALE",
     },
     {
@@ -203,7 +203,7 @@ export const products = [
         postedAt: 1349661604,
         numberOfReviews: 7000,
         rating: 3.9,
-        color: ["MUSTARD YELLOW"],
+        color: ["YELLOW"],
         gender: "MALE",
     },
     {
@@ -347,7 +347,7 @@ export const products = [
         postedAt: 1262334919,
         numberOfReviews: 100,
         rating: 4.5,
-        color: ["LIME GREEEN"],
+        color: ["GREEEN"],
         gender: "GIRLS",
     },
     {
@@ -428,7 +428,7 @@ export const products = [
         postedAt: 1483209000,
         numberOfReviews: 102,
         rating: 4.2,
-        color: ["NAVY BLUE"],
+        color: ["BLUE"],
         gender: "FEMALE",
     },
     {
@@ -568,7 +568,7 @@ export const products = [
         postedAt: 1556725578,
         numberOfReviews: 219,
         rating: 4.7,
-        color: ["TEAL BLUE"],
+        color: ["BLUE"],
         gender: "FEMALE",
     },
     {
@@ -606,7 +606,7 @@ export const products = [
         postedAt: 1454276778,
         numberOfReviews: 65,
         rating: 4.9,
-        color: ["DUSTY PINK"],
+        color: ["PINK"],
         gender: "FEMALE",
     },
     {
@@ -663,7 +663,7 @@ export const products = [
         postedAt: 1518042920,
         numberOfReviews: 8,
         rating: 4.9,
-        color: ["NAVY BLUE"],
+        color: ["BLUE"],
         gender: "BOYS",
     },
 

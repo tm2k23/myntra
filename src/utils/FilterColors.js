@@ -8,8 +8,8 @@ export const filterColors = [
         name: "Blue",
     },
     {
-        hex: "#3c4477",
-        name: "Navy Blue",
+        hex: "#FFFF00",
+        name: "Yellow",
     },
     {
         hex: "#36454f",

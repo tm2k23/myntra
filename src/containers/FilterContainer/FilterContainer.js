@@ -6,8 +6,13 @@ import {
     ColorFilter ,
     PriceFilter
 } from '../../components/index';
+import { useSelector , useDispatch } from 'react-redux';
+import { checkIfNoFilter } from '../../helpers/selectors';
 export default function FilterContainer() {
-    let isFilterApplied = true;
+    const filters = useSelector(state => state.filtersStore);
+    console.log(filters);
+    let isFilterApplied = !checkIfNoFilter(filters);
+    console.log(isFilterApplied);
     const [isFilterContainerActive , setFilterContainerActive] = React.useState(false);
     return (
         <>

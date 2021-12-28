@@ -7,7 +7,6 @@
     /* border: 2px solid black; */
     position: relative;
     width : calc(100% - 250px); 
-    /* 100% for total width of the screen - size of filter container */
     vertical-align: top;
 }
 .product-container-header{
