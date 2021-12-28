@@ -1,6 +1,8 @@
 import React from 'react'
 import './Sort.css'
-export default function Sort({sortParameter , setSortParameter}) {
+import {useDispatch} from 'react-redux';
+import { sort } from '../../actions/sort';
+export default function Sort({sortParameter}) {
     const sortItems=[
         "Price: Low to High",
         "Price: High to Low",
@@ -9,6 +11,7 @@ export default function Sort({sortParameter , setSortParameter}) {
         "Most Reviewed",
         "Recently Added"
     ]
+    const dispatch = useDispatch();
     return (
         <div className="sort-by flex-row " >
             <span className="sort-title"> 
@@ -35,8 +38,7 @@ export default function Sort({sortParameter , setSortParameter}) {
                                     value={sortOption} 
                                     className="sort-list-radio-button" 
                                     key={index}
-                                    checked={sortParameter === sortOption}
-                                    onClick={(event)=>{ setSortParameter(event.target.value) }}
+                                    onClick={(event)=>{ dispatch(sort(event.target.value)) }}
                                 />
                                 {sortOption}
                             </label>
