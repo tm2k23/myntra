@@ -11,14 +11,15 @@ const defaultBagState = [];
 export default function bag(state = defaultBagState, action) {
     switch (action.type) {
         case ADD_TO_BAG:
-            let alreadyPresent=false;
+            var alreadyPresent=false;
             state.map(item => {
-                if(item.productId === action.item.productId){
+                if(item.id == action.item.id){
                     alreadyPresent=true;
                 }
             })
+            console.log(alreadyPresent);
             if(!alreadyPresent){
-                state.push(action.item);
+                return [...state, action.item];
             }
             return [...state];
         case REMOVE_FROM_BAG:
