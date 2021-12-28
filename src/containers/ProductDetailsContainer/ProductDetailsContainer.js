@@ -54,7 +54,14 @@ export default function ProductDetailsContainer({product}) {
                                     value={size} 
                                     className="size-radio-input"
                                     id={ product.id + index}
-                                    onClick = {() => setSelectedSize(size) }
+                                    onClick = {() => {
+                                        if( isAddedToBag ){
+                                            dispatch(setSize(product,size));
+                                        }
+                                        else {
+                                            setSelectedSize(size) 
+                                        }}
+                                    }
                                     checked={selectedSize === size}
                                 />
                                 <label className="detail-size-label" for={product.id + index} >
