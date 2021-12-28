@@ -1,11 +1,10 @@
 import React from 'react'
 import './BagItemCard.css'
 import {Link} from 'react-router-dom';
+import { setQuantity , setSize , removeItemFromBag } from '../../actions/bag';
+import {useDispatch} from 'react-redux';
 export default function BagItemCard({ item }) {
-    function removeItemFromBagHandler(event){
-        console.log(item);
-        console.log("remove it from bag")
-    }
+    const dispatch = useDispatch();
     function wishlistItemFromBagHandler(event){
         console.log(item);
         console.log(" wishlist item from bag")
@@ -14,15 +13,11 @@ export default function BagItemCard({ item }) {
         console.log(item);
         console.log(" unwish list item from bag");
     }
-    function sizeChangeHnadler(event){
-        console.log(item);
-        console.log("change its size to" , event.target.value);
-    }
+    console.log(item);
     let isWishListed =true;
     const sizes=[38,40,42,44,46];
-    const selectedSize=44;
     return (
-        <div className="bag-item-card">
+        <div className="bag-item-card"  >
             <Link to={`/${item.id}`}>
                 <div className="bag-item-image-container">
                     <img src={item.images[0]} alt="product" className="bag-item-image"/>
@@ -41,7 +36,7 @@ export default function BagItemCard({ item }) {
                     <>
                         <button 
                             className="remove-item-button" 
-                            onClick={removeItemFromBagHandler}
+                            onClick={()=>dispatch(removeItemFromBag(item))}
                         >
                             <i class="fas fa-times-circle"></i>
                         </button>
@@ -62,9 +57,17 @@ export default function BagItemCard({ item }) {
                     </>
                     <div className="bag-item-quantity">
                         <span className="quantity-title">Qty : </span> &nbsp; &nbsp;
+                        <span
+                            onClick={()=>dispatch(setQuantity(item, item.quantity-1))}
+                        >
+                            <i class="fas fa-minus-square quantity-button"></i>
+                        </span>
+                        <span className="quantity-value"> {item.quantity} </span>
+                        <span
+                            onClick={()=>dispatch(setQuantity(item, item.quantity+1))}
+                        >
                         <i class="fas fa-plus-square quantity-button "></i>
-                        <span className="quantity-value"> 5 </span>
-                        <i class="fas fa-minus-square quantity-button "></i>
+                        </span>
                     </div>
                     <div className="bag-item-size" >
                         <span className="bag-item-size-title" >Size : </span>
@@ -78,8 +81,8 @@ export default function BagItemCard({ item }) {
                                             value={size} 
                                             className="size-radio-input"
                                             id={item.id + index}
-                                            onChange={sizeChangeHnadler}
-                                            checked={selectedSize === size}
+                                            onClick={()=>dispatch(setSize(item, size))}
+                                            checked={item.size === size}
                                         />
                                         <label className="bag-item-size-label" for={item.id + index} >
                                             <span className="bag-item-size-number" > {size} </span>
