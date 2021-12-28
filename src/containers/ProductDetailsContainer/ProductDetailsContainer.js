@@ -1,40 +1,22 @@
-import React from 'react'
-import './ProductDetailsContainer.css'
+import React from 'react';
+import './ProductDetailsContainer.css';
+import { useSelector , useDispatch } from 'react-redux';
+import { addItemToWishlist , removeItemFromWishlist } from '../../actions/wishlist';
+import { Link } from "react-router-dom";
+import { nFormatter , isInWishList , isInBag } from '../../helpers/general';
+import { addItemToBag} from '../../actions/bag';
+import { openModal } from '../../actions/modals';
 export default function ProductDetailsContainer({product}) {
     const sizes=[38,40,42,44,46];
-    let isAddedToBag=!!!!false;
-    let isAddedToWishlist=!!!!!false;
-    function addItemToWishListHandler(event) {
-        console.log(product);
-        console.log("add item to wishlist");
-    }
-    function removeItemFromWishlistHandler(event) {
-        console.log(product);
-        console.log("remove item from wishlist");
-    }
-    function addItemToBagHandler(event) {
-        console.log(product);
-        console.log("add item to bag");
-    }
-    function goToBagHandler(event) {
-        console.log("go to bag");
-    }
-    function nFormatter(num, digits=1) {
-        const lookup = [
-            { value: 1, symbol: "" },
-            { value: 1e3, symbol: "k" },
-            { value: 1e6, symbol: "M" },
-            { value: 1e9, symbol: "G" },
-            { value: 1e12, symbol: "T" },
-            { value: 1e15, symbol: "P" },
-            { value: 1e18, symbol: "E" }
-        ];
-        const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
-        var item = lookup.slice().reverse().find(function(item) {
-            return num >= item.value;
-        });
-        return item ? (num / item.value).toFixed(digits).replace(rx, "$1") + item.symbol : "0";
-    }
+    const dispatch = useDispatch();
+    const {wishlist , bag} = useSelector(state => {
+        return {
+            wishlist: state.wishlistStore,
+            bag: state.bagStore
+        }
+    });
+    let isAddedToWishlist = isInWishList( wishlist , product );
+    let isAddedToBag = isInBag( bag , product );
     return (
         <div className="product-details-container" >
             <h2 className="product-brandname" >{product.brandName}</h2>
@@ -76,7 +58,7 @@ export default function ProductDetailsContainer({product}) {
                     <button
                         style={isAddedToBag ? {display:'none'} : {display:'inline'} }
                         className="bag-handler-button"
-                        onClick={addItemToBagHandler}
+                        onClick={()=>{ dispatch(addItemToBag(product));}}
                     >
                         <i class="fas fa-shopping-bag"></i>
                         &nbsp;
@@ -85,7 +67,7 @@ export default function ProductDetailsContainer({product}) {
                     <button
                         style={isAddedToBag ? {display:'inline'} : {display:'none'} }
                         className="bag-handler-button"
-                        onClick={goToBagHandler}
+                        onClick={()=>{dispatch(openModal('bag'))}}
                     >
                         GO TO BAG
                         &nbsp;
@@ -96,7 +78,7 @@ export default function ProductDetailsContainer({product}) {
                     <button
                         style={isAddedToWishlist ? {display:'none'} : {display:'inline'} }
                         className="wishlist-handler-button  add-to-wishlist-button"
-                        onClick={addItemToWishListHandler}
+                        onClick={()=>{dispatch(addItemToWishlist(product));}}
                     >
                         <i class="far fa-heart"></i>
                         &nbsp;
@@ -105,7 +87,7 @@ export default function ProductDetailsContainer({product}) {
                     <button
                         style={isAddedToWishlist ? {display:'inline'} : {display:'none'} }
                         className="wishlist-handler-button remove-from-wishlist-button"
-                        onClick={removeItemFromWishlistHandler}
+                        onClick={()=>{dispatch(removeItemFromWishlist(product));}}
                     >
                         <i class="fas fa-heart" style={{color:"red"}} ></i>
                         &nbsp;

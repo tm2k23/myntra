@@ -4,17 +4,12 @@ import {ViewSimilarButton} from '../index';
 import {Link } from "react-router-dom";
 import { addItemToWishlist , removeItemFromWishlist } from '../../actions/wishlist';
 import { useDispatch , useSelector } from 'react-redux'; 
-import { nFormatter } from '../../helpers/formatters';
+import { nFormatter , isInWishList } from '../../helpers/general';
 export default function ItemCard( {item , index} ) {
     
     const dispatch = useDispatch();
     const wishlist = useSelector(state => state.wishlistStore);
-    let isWishlisted = false;
-    wishlist.forEach(wishlistItem => {
-        if(wishlistItem.id === item.id){
-            isWishlisted = true;
-        }
-    });
+    let isWishlisted = isInWishList( wishlist , item );
     return (
         <div className="item-card" key={index}>
             <div className="item-image">

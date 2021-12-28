@@ -14,3 +14,23 @@ export const nFormatter = (num, digits=1) => {
     });
     return item ? (num / item.value).toFixed(digits).replace(rx, "$1") + item.symbol : "0";
 }
+
+export const isInWishList = ( wishList , item )  =>{
+    let isPresent = false;
+    wishList.forEach( wishItem => {
+        if( wishItem.id === item.id ){
+            isPresent = true;
+        }
+    });
+    return isPresent;
+}
+
+export const isInBag = ( bag , item )  =>{
+    let isPresent = false;
+    bag.forEach( bagItem => {
+        if( bagItem.id === item.id ){
+            isPresent = true;
+        }
+    });
+    return isPresent;
+}
