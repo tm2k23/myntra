@@ -24,7 +24,11 @@ export default function SimilarProductsContainer() {
             </div>
             {
                 products.length === 0 ?
-                <Empty />
+                <>
+                    <h1 className="no-similar-product-title" >No Similar Product</h1>
+                    <Empty />
+                    
+                </>
                 :
                 products.map((product,index) =>{
                     return <ItemCard item={product} index={index} />

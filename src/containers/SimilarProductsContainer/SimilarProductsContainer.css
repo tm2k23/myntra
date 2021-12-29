@@ -30,6 +30,11 @@
 .similar-products-container .view-similar-button{
     display: none !important ;
 }
+.no-similar-product-title{
+    position : absolute;
+    color : #6760DB;
+    top : 20%;
+}
 @media screen and (max-width: 1150px) {
     .similar-products-container{
         width : 50%;
