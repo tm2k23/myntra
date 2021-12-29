@@ -20,7 +20,7 @@ export default function Price({activeFilter}) {
             <div className="filter-title" >PRICE</div>
             {
                 filterPrices.map( price => {
-                    console.log( activeFilter , price );    
+                    // console.log( activeFilter , price );    
                     return (
                         <label className="filter-label" >
                             <input 

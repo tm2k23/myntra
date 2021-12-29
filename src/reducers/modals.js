@@ -9,7 +9,7 @@ const defaultModalState = {
 };
 
 export default function modals(state = defaultModalState, action) {
-    console.log(state);
+    // console.log(state);
     switch (action.type) {
         case OPEN_MODAL:
             return {
