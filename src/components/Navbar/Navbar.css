@@ -49,25 +49,22 @@
     width : 20px;
     position: absolute;
     left: 15px;
-    top: 15px;
 }
 .back-from-search{
     display: none;
     font-size: 1.5rem;
     position : absolute;
     color: var(--lighter-color);
-    top : 0px;
-    left : -40px;
+    left : -9vw;
 }
 .hide{
-    display: none;
+    display: none!important;
 }
 .clear-query-button{
     color : var(--lighter-color);
     font-size: 1.5rem;
     position: absolute;
     right: 10px;
-    top:7.5px;
 }
 /******************************
             Actions
@@ -125,11 +122,9 @@
     }
     .search-icon{
         left: 15px;
-        top: 10px;
     }
     .clear-query-button{
         right: 10px;
-        top: 3px;
     }
 }
 @media screen and (max-width: 850px){
@@ -154,12 +149,8 @@
     .mobile-search-button{
         display: inline-block;
     }
-    .search-icon{
-        top: 8px;
-    }
     .clear-query-button{
         right: 10px;
-        top: 1.5px;
     }
     .action-text{
         display:none;
@@ -184,7 +175,6 @@
         width : 80vw;
     }
     .back-from-search{
-        top : 0px;
-        left : -30px;
+        left : -9vw;
     }
 }
