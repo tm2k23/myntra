@@ -7,6 +7,7 @@ import { wishlist } from './wishlist';
 import sort from './sort';
 import filters from './filters';
 import search from './search';
+import similarProducts from './similarProducts';
 
 const reducer = combineReducers({
     modalsStore : modals,
@@ -15,7 +16,8 @@ const reducer = combineReducers({
     wishlistStore : wishlist,
     sortStore : sort,
     filtersStore : filters,
-    searchStore : search
+    searchStore : search,
+    similarProductsStore : similarProducts
 });
 
 export default reducer;

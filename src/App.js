@@ -1,18 +1,18 @@
 import {Navbar , Breadcrumb} from './components/index.js';
-import {Modal} from './containers/index.js';
+import {Modal,SimilarProductsContainer} from './containers/index.js';
 import {HomePage , ProductPage} from './pages/index.js';
 import {BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { useSelector } from 'react-redux';
+import { useSelector , } from 'react-redux';
 import {Page404} from './components/index.js';
 function App() {
-  const {
-      modals
-  } = useSelector(state => ({
+  const { modals , similarProducts } = useSelector(state => ({
       modals : state.modalsStore,
+      similarProducts : state.similarProductsStore
   }));
   return (
     <div className="App" >
       <BrowserRouter>
+        {similarProducts.isActive && <SimilarProductsContainer/>}
         {modals.isActive && <Modal/>}
         <Navbar/>
         <Routes>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Modal.css';
-import {BagContainer , WishListContainer,SimilarProductsContainer} from '../index';
+import {BagContainer , WishListContainer} from '../index';
 import { useDispatch, useSelector } from 'react-redux';
 import {closeModal} from '../../actions/modals';
 export default function Modal() {
@@ -17,8 +17,6 @@ export default function Modal() {
                 return <BagContainer/>;
             case "wishlist":
                 return <WishListContainer/>;
-            case "similar":
-                return <SimilarProductsContainer/>;
             default:
                 return <BagContainer/>;
         }

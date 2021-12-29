@@ -231,6 +231,9 @@ export default function SimilarProductsContainer() {
     ];
     return (
         <div className="similar-products-container flex-row " >
+            <div className="close-similar-product" >
+                <i class="fas fa-arrow-left"></i>
+            </div>
             {
                 products.map((product,index) =>{
                     return <ItemCard item={product} index={index} />
