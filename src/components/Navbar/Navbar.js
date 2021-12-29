@@ -43,7 +43,10 @@ export default function Navbar() {
                 }
             </div>
             <div className={isSearchActive ? "search-container flex-row center " : "mobile-hide search-container flex-row center "}>
-                <span className={ !isSearchActive ? "mobile-hide back-from-search " : " back-from-search" }>
+                <span 
+                    className={ !isSearchActive ? "mobile-hide back-from-search " : " back-from-search" }
+                    onClick={() => setIsSearchActive(false)}
+                >
                     <i class="fas fa-arrow-left"></i>
                 </span>
                 <Search className="search-icon" />
@@ -62,7 +65,10 @@ export default function Navbar() {
                     }}
                 >
                 </input>
-                <span className={(query===null || query==="") ? "hide" : "clear-query-button"} >
+                <span 
+                    className={(query===null || query==="") ? "hide" : "clear-query-button"} 
+                    onClick={() => setQuery(null)}
+                >
                     <i class="far fa-times-circle"></i>
                 </span>
             </div>

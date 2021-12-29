@@ -175,6 +175,6 @@
         width : 80vw;
     }
     .back-from-search{
-        left : -9vw;
+        left : calc( 80vw - 100vw + 40px )
     }
 }
