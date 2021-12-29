@@ -9,14 +9,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import {Link } from "react-router-dom";
 import {openModal} from '../../actions/modals';
-import { search } from '../../actions/search';
+import { search , toggleSearchState } from '../../actions/search';
 export default function Navbar() {
-    const {currentSearchQuery} = useSelector(state => {
+    const {currentSearchQuery , isSearchActive} = useSelector(state => {
         return {
-            currentSearchQuery : state.searchStore
+            currentSearchQuery : state.searchStore.query,
+            isSearchActive : state.searchStore.isSearchActive
         }
     });
-    const [isSearchActive , setIsSearchActive] = useState(false);
     const [query , setQuery] = useState(null);
     console.log(currentSearchQuery , query);
     const dispatch = useDispatch();
@@ -55,7 +55,7 @@ export default function Navbar() {
                 <span 
                     className="back-from-search"
                     onClick={() =>{
-                        setIsSearchActive(false)
+                        dispatch(toggleSearchState(false))
                     }}
                 >
                     <i class="fas fa-arrow-left"></i>
@@ -94,7 +94,7 @@ export default function Navbar() {
             <div className={isSearchActive ? "mobile-hide action-container flex-row" : "action-container flex-row"}  >
                 <div 
                     className="action-item mobile-search-button" 
-                    onClick={() => setIsSearchActive(true)}
+                    onClick={() => dispatch(toggleSearchState(true))}
                 >
                     <Search className="action-icon" />
                 </div>

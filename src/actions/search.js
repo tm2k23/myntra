@@ -1,5 +1,5 @@
 export const SEARCH = "SEARCH";
-
+export const TOGGLE_SEARCH_STATE = "TOGGLE_SEARCH_STATE";
 export const search = ( query ) => {
     if( query !== null && query!=="" ){
         return {
@@ -12,5 +12,11 @@ export const search = ( query ) => {
             type: SEARCH,
             query : null
         }
+    }
+}
+export const toggleSearchState = ( isSearchActive ) => {
+    return {
+        type: TOGGLE_SEARCH_STATE,
+        isSearchActive : isSearchActive
     }
 }

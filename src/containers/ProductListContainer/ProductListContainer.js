@@ -6,11 +6,11 @@ import { filterer , checkIfNoFilter } from '../../helpers/selectors';
 import {searcher} from '../../helpers/search';
 import { useSelector } from 'react-redux';
 export default function ProductListContainer( {products} ) {
-    const {sortParameter , filters , searchQuery} = useSelector(state => {
+    const {sortParameter , filters , searchQuery } = useSelector(state => {
         return {
             sortParameter : state.sortStore,
             filters : state.filtersStore,
-            searchQuery : state.searchStore
+            searchQuery : state.searchStore.query,
         }
     });
     if( searchQuery !== null && searchQuery !== "" ){
