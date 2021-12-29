@@ -23,13 +23,12 @@ export default function SimilarProductsContainer() {
                 <i class="fas fa-arrow-left"></i>
             </div>
             {
-                // products.length === 0 ?
-                // <Empty />
-                // return <h1>No Product</h1>
-                // :
-                // products.map((product,index) =>{
-                //     return <ItemCard item={product} index={index} />
-                // })
+                products.length === 0 ?
+                <Empty />
+                :
+                products.map((product,index) =>{
+                    return <ItemCard item={product} index={index} />
+                })
             }
         </div>
     )
