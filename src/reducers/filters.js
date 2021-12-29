@@ -10,23 +10,10 @@ import {
     CLEAR_ALL_FILTERS
 } from '../actions/filters';
 const defaultFilterState = {
-    gender : "Male",
-    discount : 50,
-    color : ["White","Blue"],
-    price : [
-        {
-            start : 2000,
-            end : 3000
-        },
-        {
-            start : 3000,
-            end : 4000
-        },
-        {
-            start : 4000,
-            end : 5000
-        }
-    ],
+    gender : null,
+    discount : null,
+    color : [],
+    price : [ ],
 }
 
 export default function filters( state = defaultFilterState , action){
