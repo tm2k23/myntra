@@ -11,7 +11,12 @@ export default function ViewSimilarButton({item , externalClassName}) {
                 dispatch(showSimilarProducts(item))
             }}
         >
-            <p>View Similar</p>
+            <p className="small-screen" >
+                <i className="fas fa-th-large"></i>
+            </p>
+            <p className="large-screen" >
+                View Similar
+            </p>
         </div>
     )
 }
