@@ -11,10 +11,6 @@ export default function Gender({activeFilter}) {
         "Girls",
     ];
     const dispatch = useDispatch();
-    function genderChangeHandler(event){
-        // console.log( event.target.checked , event.target.value );
-        dispatch( addGenderFilter( event.target.value))
-    }
     return (
         <div className="specific-filter-container" >
             {
@@ -25,7 +21,7 @@ export default function Gender({activeFilter}) {
                                 type="radio" name="gender" 
                                 value={gender}
                                 checked = {activeFilter?.toLowerCase() === gender.toLowerCase()}
-                                onClick={ genderChangeHandler }
+                                onClick={ (event) => dispatch( addGenderFilter( event.target.value)) }
                             ></input>
                             <span className="filter-name">
                                 {gender}
