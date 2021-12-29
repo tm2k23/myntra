@@ -27,7 +27,7 @@ export const emptyBag = () => {
 }
 export const setQuantity = (item, quantity) => {
     // console.log("set quantity of ", item, " to ", quantity)
-    if(quantity==0){
+    if(quantity===0){
         return {
             type: REMOVE_FROM_BAG,
             item : item

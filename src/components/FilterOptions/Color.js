@@ -17,9 +17,9 @@ export default function Color({activeFilter}) {
         <div className=" specific-filter-container " >
             <div className="filter-title" >COLOR</div>
             {
-                filterColors.map( color => {
+                filterColors.map( (color,index) => {
                     return (
-                        <label className="filter-label" >
+                        <label className="filter-label" key={index}>
                             <input 
                                 type="checkbox" 
                                 name="color" 

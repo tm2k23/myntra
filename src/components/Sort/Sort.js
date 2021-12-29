@@ -31,7 +31,7 @@ export default function Sort({sortParameter}) {
                 {
                     sortItems.map((sortOption, index) => {
                         return (
-                            <label className="sort-list-item flex-row " >
+                            <label className="sort-list-item flex-row " key={index} >
                                 <input 
                                     type="radio" 
                                     name="sort" 

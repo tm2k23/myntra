@@ -17,10 +17,10 @@ export default function ActiveFilter() {
     const {gender , discount , color , price }  = filters;
     if(gender) activeGenderFilter.push(gender);
     if(discount) activeDiscountFilter.push(discount);
-    color.map( (color) => {
+    color.forEach( (color) => {
         activeColorFilter.push( color );
     } )
-    price.map( (price) => {
+    price.forEach( (price) => {
         activePriceFilter.push( price );
     } ) 
     return (
@@ -81,6 +81,7 @@ export default function ActiveFilter() {
                     return (
                         <div
                             className="active-filter-name flex-row"
+                            key = {key}
                         >
                             Rs. {price.start} to Rs. {price.end}
                             &nbsp; &nbsp;

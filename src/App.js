@@ -1,8 +1,8 @@
-import {Navbar , Breadcrumb} from './components/index.js';
+import {Navbar } from './components/index.js';
 import {Modal,SimilarProductsContainer} from './containers/index.js';
 import {HomePage , ProductPage} from './pages/index.js';
-import {BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { useSelector , } from 'react-redux';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { useSelector } from 'react-redux';
 import {Page404} from './components/index.js';
 function App() {
   const { modals , similarProducts } = useSelector(state => ({
