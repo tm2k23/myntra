@@ -1,6 +1,8 @@
 import React from 'react'
 import './SimilarProductsContainer.css'
 import { ItemCard } from '../../components/index.js';
+import { useDispatch } from 'react-redux';
+import {hideSimilarProducts} from '../../actions/similarProducts';
 export default function SimilarProductsContainer() {
     let products=[
         {
@@ -229,9 +231,13 @@ export default function SimilarProductsContainer() {
             gender: "FEMALE",
         }
     ];
+    const dispatch = useDispatch();
     return (
         <div className="similar-products-container flex-row " >
-            <div className="close-similar-product" >
+            <div 
+                className="close-similar-product" 
+                onClick={() => dispatch(hideSimilarProducts())}
+            >
                 <i class="fas fa-arrow-left"></i>
             </div>
             {
