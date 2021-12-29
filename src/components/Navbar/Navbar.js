@@ -9,10 +9,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import {Link } from "react-router-dom";
 import {openModal} from '../../actions/modals';
+import { search } from '../../actions/search';
 export default function Navbar() {
-    const [isSearchActive , setIsSearchActive] = useState(!!!!false);
+    const {currentSearchQuery} = useSelector(state => {
+        return {
+            currentSearchQuery : state.searchStore
+        }
+    });
+    const [isSearchActive , setIsSearchActive] = useState(false);
     const [query , setQuery] = useState(null);
-    console.log(query);
+    console.log(currentSearchQuery , query);
     const dispatch = useDispatch();
     const navLinks = [
         "MEN",
@@ -22,7 +28,7 @@ export default function Navbar() {
         "OFFERS"
     ];
     function searchQueryHandler(query){
-        console.log("search for ", query);
+        dispatch( search(query) )
     }
     const bagItemCount = useSelector(state => state.bagStore.length);
     return (
@@ -48,7 +54,9 @@ export default function Navbar() {
             <div className={isSearchActive ? "search-container flex-row center " : "mobile-hide search-container flex-row center "}>
                 <span 
                     className="back-from-search"
-                    onClick={() => setIsSearchActive(false)}
+                    onClick={() =>{
+                        setIsSearchActive(false)
+                    }}
                 >
                     <i class="fas fa-arrow-left"></i>
                 </span>
@@ -56,7 +64,6 @@ export default function Navbar() {
                     className="search-icon" 
                     onClick={() => {
                         let searchQuery = query;
-                        setQuery(null);
                         searchQueryHandler(searchQuery);
                     }}
                 />
@@ -69,7 +76,6 @@ export default function Navbar() {
                     onKeyDown={(e) => {
                         if (e.key === "Enter") {
                             let searchQuery = query;
-                            setQuery(null);
                             searchQueryHandler(searchQuery);
                         }
                     }}
@@ -77,7 +83,10 @@ export default function Navbar() {
                 </input>
                 <span 
                     className={(query===null || query==="") ? "hide" : "clear-query-button"} 
-                    onClick={() => setQuery(null)}
+                    onClick={() => {
+                        setQuery(null);
+                        searchQueryHandler(null)
+                    }}
                 >
                     <i class="far fa-times-circle"></i>
                 </span>
