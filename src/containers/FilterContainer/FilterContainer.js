@@ -8,11 +8,13 @@ import {
 } from '../../components/index';
 import { useSelector , useDispatch } from 'react-redux';
 import { checkIfNoFilter } from '../../helpers/selectors';
+import {clearAllFilters} from '../../actions/filters';
 export default function FilterContainer() {
+    const dispatch = useDispatch();
     const filters = useSelector(state => state.filtersStore);
-    console.log(filters);
+    // console.log(filters);
     let isFilterApplied = !checkIfNoFilter(filters);
-    console.log(isFilterApplied);
+    // console.log(isFilterApplied);
     const [isFilterContainerActive , setFilterContainerActive] = React.useState(false);
     return (
         <>
@@ -32,6 +34,7 @@ export default function FilterContainer() {
                 <span 
                     className="clear-all-filters" 
                     style={isFilterApplied ? {display: 'block'} : {display: 'none'}}
+                    onClick={() => dispatch(clearAllFilters())}
                 >
                     CLEAR ALL
                 </span>
