@@ -21,6 +21,9 @@ export default function Navbar() {
         "HOME & LIVING",
         "OFFERS"
     ];
+    function searchQueryHandler(query){
+        console.log("search for ", query);
+    }
     const bagItemCount = useSelector(state => state.bagStore.length);
     return (
         <div className=" navbar flex-row" >
@@ -44,12 +47,19 @@ export default function Navbar() {
             </div>
             <div className={isSearchActive ? "search-container flex-row center " : "mobile-hide search-container flex-row center "}>
                 <span 
-                    className={ !isSearchActive ? "mobile-hide back-from-search " : " back-from-search" }
+                    className="back-from-search"
                     onClick={() => setIsSearchActive(false)}
                 >
                     <i class="fas fa-arrow-left"></i>
                 </span>
-                <Search className="search-icon" />
+                <Search 
+                    className="search-icon" 
+                    onClick={() => {
+                        let searchQuery = query;
+                        setQuery(null);
+                        searchQueryHandler(searchQuery);
+                    }}
+                />
                 <input 
                     type="text" 
                     className="search-box"
@@ -60,7 +70,7 @@ export default function Navbar() {
                         if (e.key === "Enter") {
                             let searchQuery = query;
                             setQuery(null);
-                            console.log("Search" , setQuery);
+                            searchQueryHandler(searchQuery);
                         }
                     }}
                 >
