@@ -1,6 +1,8 @@
 // this component is to display gender filter
 import React from 'react';
 import './Filters.css';
+import { useDispatch } from 'react-redux';
+import {addGenderFilter} from '../../actions/filters';
 export default function Gender({activeFilter}) {
     const Genders=[
         "Male",
@@ -8,6 +10,11 @@ export default function Gender({activeFilter}) {
         "Boys",
         "Girls",
     ];
+    const dispatch = useDispatch();
+    function genderChangeHandler(event){
+        // console.log( event.target.checked , event.target.value );
+        dispatch( addGenderFilter( event.target.value))
+    }
     return (
         <div className="specific-filter-container" >
             {
@@ -17,7 +24,8 @@ export default function Gender({activeFilter}) {
                             <input 
                                 type="radio" name="gender" 
                                 value={gender}
-                                checked={activeFilter?.toLowerCase() === gender.toLowerCase()}
+                                checked = {activeFilter?.toLowerCase() === gender.toLowerCase()}
+                                onClick={ genderChangeHandler }
                             ></input>
                             <span className="filter-name">
                                 {gender}
