@@ -4,6 +4,7 @@ import { ItemCard } from '../../components/index.js';
 import { useDispatch , useSelector } from 'react-redux';
 import {hideSimilarProducts} from '../../actions/similarProducts';
 import {findSimilar} from '../../helpers/similar';
+import {Empty} from '../../components/index.js';
 export default function SimilarProductsContainer() {
     const dispatch = useDispatch();
     let {products , productToBeSimilar} = useSelector(state => {
@@ -22,9 +23,13 @@ export default function SimilarProductsContainer() {
                 <i class="fas fa-arrow-left"></i>
             </div>
             {
-                products.map((product,index) =>{
-                    return <ItemCard item={product} index={index} />
-                })
+                // products.length === 0 ?
+                // <Empty />
+                // return <h1>No Product</h1>
+                // :
+                // products.map((product,index) =>{
+                //     return <ItemCard item={product} index={index} />
+                // })
             }
         </div>
     )
