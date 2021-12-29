@@ -1,6 +1,12 @@
 import React from 'react'
 import './ActiveFilters.css'
 import { useDispatch , useSelector } from 'react-redux'
+import { 
+    removeGenderFilter , 
+    removePriceFilter , 
+    removeDiscountFilter , 
+    removeColorFilter 
+} from '../../actions/filters'
 export default function ActiveFilter() {
     const activeGenderFilter=[];
     const activeDiscountFilter=[];
@@ -27,7 +33,9 @@ export default function ActiveFilter() {
                         >
                             {gender}
                             &nbsp; &nbsp;
-                            <span>
+                            <span
+                                onClick={()=>dispatch(removeGenderFilter(gender))}
+                            >
                                 <i class="fas fa-times remove-filter"></i>
                             </span>
                         </div>
@@ -42,7 +50,9 @@ export default function ActiveFilter() {
                         >
                             {discount}% and above
                             &nbsp; &nbsp;
-                            <span>
+                            <span
+                                onClick={()=>dispatch(removeDiscountFilter(discount))}
+                            >
                                 <i class="fas fa-times remove-filter"></i>
                             </span>
                         </div>
@@ -57,7 +67,9 @@ export default function ActiveFilter() {
                         >
                             {color}
                             &nbsp; &nbsp;
-                            <span>
+                            <span
+                                onClick={()=>dispatch(removeColorFilter(color))}
+                            >
                                 <i class="fas fa-times remove-filter"></i>
                             </span>
                         </div>
@@ -72,7 +84,9 @@ export default function ActiveFilter() {
                         >
                             Rs. {price.start} to Rs. {price.end}
                             &nbsp; &nbsp;
-                            <span>
+                            <span
+                                onClick={()=>dispatch(removePriceFilter(price))}
+                            >
                                 <i class="fas fa-times remove-filter"></i>
                             </span>
                         </div>

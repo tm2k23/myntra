@@ -9,7 +9,6 @@ import {
     REMOVE_PRICE_FILTER,
     CLEAR_ALL_FILTERS
 } from '../actions/filters';
-import {checkPriceInFilter} from '../helpers/selectors';
 const defaultFilterState = {
     gender : "Male",
     discount : 50,
@@ -70,7 +69,7 @@ export default function filters( state = defaultFilterState , action){
         case REMOVE_PRICE_FILTER :
             return {
                 ...state,
-                price : state.price.filter(price => checkPriceInFilter(price , action.price)===false)
+                price : state.price.filter(price => JSON.stringify(action.price) !== JSON.stringify(price))
             }
         case CLEAR_ALL_FILTERS :
             return defaultFilterState
