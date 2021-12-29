@@ -5,7 +5,7 @@ import {
 
 const defaultSimilarProductsState = {
     product:null,
-    isActive:true,
+    isActive:false,
 };
 
 export default function similarProducts( state=defaultSimilarProductsState , action ){
