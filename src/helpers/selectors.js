@@ -12,7 +12,7 @@ export const checkPriceInFilter = ( price , filters ) => {
     })
     return isFound;
 }
-let genderFilter = ( products , genderFilter ) => {
+export const genderFilter = ( products , genderFilter ) => {
     if(genderFilter === null) return products;
     return products.filter(product => {
         let productGender_UC = (product.gender).toUpperCase();
