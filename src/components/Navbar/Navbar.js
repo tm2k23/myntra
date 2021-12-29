@@ -11,6 +11,8 @@ import {Link } from "react-router-dom";
 import {openModal} from '../../actions/modals';
 export default function Navbar() {
     const [isSearchActive , setIsSearchActive] = useState(!!!!false);
+    const [query , setQuery] = useState(null);
+    console.log(query);
     const dispatch = useDispatch();
     const navLinks = [
         "MEN",
@@ -23,7 +25,11 @@ export default function Navbar() {
     return (
         <div className=" navbar flex-row" >
             <Link to="/">
-                <img src={logo} alt="logo" className="logo" />
+                <img 
+                    src={logo} 
+                    alt="logo" 
+                    className = {isSearchActive ? "logo mobile-hide" : "logo"}
+                />
             </Link>
             <div className="nav-links-container flex-row ">
                 {
@@ -37,13 +43,28 @@ export default function Navbar() {
                 }
             </div>
             <div className={isSearchActive ? "search-container flex-row center " : "mobile-hide search-container flex-row center "}>
+                <span className={ !isSearchActive ? "mobile-hide back-from-search " : " back-from-search" }>
+                    <i class="fas fa-arrow-left"></i>
+                </span>
                 <Search className="search-icon" />
                 <input 
                     type="text" 
                     className="search-box"
                     placeholder='Search for products, brands...'
+                    value={query!==null ? query : ""}
+                    onChange={(e) => setQuery(e.target.value)}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                            let searchQuery = query;
+                            setQuery(null);
+                            console.log("Search" , setQuery);
+                        }
+                    }}
                 >
                 </input>
+                <span className={(query===null || query==="") ? "hide" : "clear-query-button"} >
+                    <i class="far fa-times-circle"></i>
+                </span>
             </div>
             <div className={isSearchActive ? "mobile-hide action-container flex-row" : "action-container flex-row"}  >
                 <div 

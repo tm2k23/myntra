@@ -27,12 +27,16 @@
 /******************************
         Search Bar
 *******************************/
+.search-container{
+    position : relative;
+}
 .search-box{
     border : none;
     height : 50px;
     width : 400px;
     background-color: rgb(245,245,246);
-    padding-left: 60px;
+    padding-left: 50px;
+    padding-right : 50px;
     font-size : 0.9rem;
     border-radius: 5px;
 }
@@ -43,10 +47,28 @@
 .search-icon{
     height : 20px;
     width : 20px;
-    transform : translateX(200%);
+    position: absolute;
+    left: 15px;
+    top: 15px;
 }
-
-
+.back-from-search{
+    display: none;
+    font-size: 1.5rem;
+    position : absolute;
+    color: var(--lighter-color);
+    top : 0px;
+    left : -40px;
+}
+.hide{
+    display: none;
+}
+.clear-query-button{
+    color : var(--lighter-color);
+    font-size: 1.5rem;
+    position: absolute;
+    right: 10px;
+    top:7.5px;
+}
 /******************************
             Actions
 *******************************/
@@ -101,6 +123,14 @@
         width : 500px;
         height : 40px;
     }
+    .search-icon{
+        left: 15px;
+        top: 10px;
+    }
+    .clear-query-button{
+        right: 10px;
+        top: 3px;
+    }
 }
 @media screen and (max-width: 850px){
     .search-box{
@@ -118,8 +148,18 @@
         height : 40px;
         width : 40px;
     }
+    .back-from-search{
+        display: inline-block;
+    }
     .mobile-search-button{
         display: inline-block;
+    }
+    .search-icon{
+        top: 8px;
+    }
+    .clear-query-button{
+        right: 10px;
+        top: 1.5px;
     }
     .action-text{
         display:none;
@@ -135,7 +175,16 @@
         display:none;
     }
     .search-box{
-        width : 70vw;
+        width : 83vw;
         height : 35px;
+    }
+}
+@media screen and (max-width: 450px){
+    .search-box{
+        width : 80vw;
+    }
+    .back-from-search{
+        top : 0px;
+        left : -30px;
     }
 }
