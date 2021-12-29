@@ -5,7 +5,11 @@ import { Carousel } from 'react-responsive-carousel';
 export default function ProductSampleCarousel({product}) {
     return (
         <div className="product-sample-carousel" >
-            <Carousel showThumbs={false} >
+            <Carousel 
+                showThumbs={false} 
+                showArrows={false}
+                showStatus={false}
+            >
                 {
                     product.images.map((image, index) => {
                         return (
