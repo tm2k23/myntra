@@ -17,7 +17,7 @@ export default function Navbar() {
             isSearchActive : state.searchStore.isSearchActive
         }
     });
-    const [query , setQuery] = useState(null);
+    const [query , setQuery] = useState(currentSearchQuery);
     console.log(currentSearchQuery , query);
     const dispatch = useDispatch();
     const navLinks = [
