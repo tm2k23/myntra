@@ -28,6 +28,7 @@ export default function Navbar() {
         "OFFERS"
     ];
     function searchQueryHandler(query){
+        query.trim();
         dispatch( search(query) )
     }
     const bagItemCount = useSelector(state => state.bagStore.length);
