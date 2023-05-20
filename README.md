@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Myntra Clone
+### [Live Link](https://myntra-clone-tejas.netlify.app/)  |  [Video Demo](https://drive.google.com/file/d/1inz0klV3BUnM517INqFhtWN3311-qXE5/view?usp=share_link)
+This is a clone of the popular e-commerce platform Myntra. It is a web application built using React, Redux, HTML, and CSS.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+The Myntra Clone web app offers the following features:
 
-In the project directory, you can run:
+1. Filters: Users can filter products based on various criteria such as gender, discount range, color, and price. This allows users to narrow down their search and find products that match their preferences.
 
-### `npm start`
+2. Sort: Users can sort items by price, discount, ratings, and review counts. Sorting options help users find products based on their preferences and make informed purchasing decisions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Bag: Users can add products to their bag or shopping cart. This feature enables users to collect items they wish to purchase and proceed to the checkout process.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. Wishlist: Users can create a wishlist of their favorite products. This feature allows users to save items for future reference or purchase.
 
-### `npm test`
+5. View Similar Products: Users can view similar products based on the selected item. This functionality helps users discover alternative options and explore related products.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. Search Products: Users can search for specific products using keywords or product names. The search functionality makes it easier for users to find desired items quickly.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run the Myntra Clone web app locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone this repository to your local machine. ```git clone https://github.com/tm2k23/myntra.git```
+2. Install the necessary dependencies using npm or yarn. ```npm install```
+3. Start the development server. ```npm start```
+4. Open your web browser and navigate to `http://localhost:3000` to access the Myntra Clone web app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployment
 
-### `npm run eject`
+To deploy the Myntra Clone web app to a production environment, you can follow the deployment guidelines specific to your hosting provider. Remember to build the app before deploying.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```npm run build```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
