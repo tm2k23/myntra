@@ -6,6 +6,7 @@ This is a clone of the popular e-commerce platform Myntra. It is a web applicati
     <img src="preview.gif" alt="demo gif">
   </a>
 </p>
+
 ## Features
 
 The Myntra Clone web app offers the following features:
