@@ -1,7 +1,11 @@
 # Myntra Clone
 ### [Live Link](https://myntra-clone-tejas.netlify.app/)  |  [Video Demo](https://drive.google.com/file/d/1inz0klV3BUnM517INqFhtWN3311-qXE5/view?usp=share_link)
 This is a clone of the popular e-commerce platform Myntra. It is a web application built using React, Redux, HTML, and CSS.
-
+<p align="center">
+  <a href="https://myntra-clone-tejas.netlify.app/">
+    <img src="preview.gif" alt="demo gif">
+  </a>
+</p>
 ## Features
 
 The Myntra Clone web app offers the following features:
